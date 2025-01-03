@@ -121,6 +121,61 @@
             </aside>
         </section>
 
+        <section class="w-[95%] m-auto mt-[50px] 2xl:mt-[100px] 2xl:w-[90%]">
+            <h1 class="font-semibold 2xl:text-[44px] text-[34px]">Как нас найти</h1><br>
+            <section class="w-[380px] h-[482px] 2xl:w-[100%] 2xl:h-[492px]">
+                <img src="./Main-page-img/map.png" alt="" class="2xl:block sm:hidden">
+                <img src="./Main-page-img/map (1).png" alt="" class="m-auto 2xl:hidden sm:block">
+            </section>
+        </section>
+
+        <section class="w-[95%] m-auto mt-[50px] 2xl:mt-[100px] 2xl:w-[90%] rounded-3xl bg-gradient-to-r from-[#02B0C5] to-[#0074B8] flex items-center justify-center">
+            <div class="w-[90%] m-auto flex flex-col 2xl:gap-[50px] gap-[20px] 2xl:my-[60px] my-[20px]">
+                <section class="flex flex-col 2xl:flex-row 2xl:items-center 2xl:justify-between">
+                    <h1 class="text-white font-bold text-[34px] 2xl:text-[44px] w-[50%]">Записаться на приём</h1>
+                    <p class="text-white 2xl:w-[31%]">Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
+                </section>
+
+                <form class="flex flex-col 2xl:flex-row justify-between">
+                    <aside class="2xl:w-[31%]">
+                        <div class="mb-4">
+                            <select class="w-full p-3 bg-gray-50 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                                <option value="" disabled selected>Выберите направление</option>
+                                <option value="1">Направление 1</option>
+                                <option value="2">Направление 2</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <select class="w-full p-3 bg-gray-50 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                                <option value="" disabled selected>Выберите врача</option>
+                                <option value="1">Врач 1</option>
+                                <option value="2">Врач 2</option>
+                            </select>
+                        </div>
+                    </aside>
+
+                    <aside class="2xl:w-[31%]">
+                        <div class="mb-4">
+                            <input type="text" class="w-full p-3 bg-gray-50 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="mb-4">
+                            <input type="tel" class="w-full p-3 bg-gray-50 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ваш телефон" required>
+                        </div>
+                    </aside>
+
+                    <div class="2xl:w-[31%]">
+                        <div class="mb-4">
+                            <button type="submit" class="w-full bg-teal-500 hover:bg-teal-600 text-white py-3 rounded font-bold">Оставить заявку</button>
+                        </div>
+                        <div class="flex items-start">
+                            <input type="checkbox" id="policy" class="mt-1 mr-2" required>
+                            <label for="policy" class="text-[#FFFFFF] text-sm">Отправляя заявку, вы соглашаетесь на нашу <a href="#" class="underline">политику конфиденциальности</a>.</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
+
 </body>
 </html>

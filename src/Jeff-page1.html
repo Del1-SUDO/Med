@@ -8,9 +8,14 @@
     <link rel="stylesheet" href="/fontawesome-free-6.6.0-web/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
 </head>
+<style>
+    #text-shadow-hover:hover{
+        text-shadow: -5px 5px 2px #00578A;
+    }
+</style>
 
 <body class="font-['Nunito']">
-    <header class="bg-[#FCFCFC] sm:shadow-[0_2px_22px_0_lightgray] p-2 sm:pb-1">
+    <header class="bg-[#FCFCFC] sm:shadow-[0_2px_22px_0_lightgray] py-2 sm:pb-1">
         <nav class="w-[95%] m-auto mb-[10px] flex items-center justify-between sm:gap-[50px] 2xl:gap-0">
             <article>
                 <img src="./Main-page-img/logo.png" alt="">
@@ -81,9 +86,69 @@
             </div>
         </nav>
 
-        <section>
-
+        <section style="background: linear-gradient(to left, #0074B8, #00BAC6);" class="w-[100%] 2xl:overflow-hidden sm:overflow-hidden sm:h-[720px] 2xl:h-[672px] sm:relative 2xl:relative">
+            <div class="sm:flex 2xl:flex 2xl:flex-row sm:flex-col sm:items-center 2xl:justify-start 2xl:items-center w-[90%] mx-auto">
+                <aside class="flex 2xl:mt-[100px] sm:pt-[50px] text-white sm:w-[350px] 2xl:w-[550px] flex-col gap-[30px]">
+                    <h1 class="2xl:text-[60px] sm:text-[40px] font-[700] sm:leading-[40px] 2xl:leading-[60px]">Позаботьтесь о своём здоровье</h1>
+                    <p class="2xl:text-[20px] sm:text-[16px] font-[400] sm:leading-[22px] 2xl:leading-[30px]">Осуществляем комплексное медицинское обслуживание населения: консультации и амбулаторное лечение у специалистов всех направлений, медицинские обследования и диагностические процедуры.</p>
+                    <button style="transition: transform 0.3s ease, background-color 0.3s ease;" class="hover:bg-white hover:shadow-[-5px_3px_10px_black] hover:text-black hover:translate-x-[2px] hover:translate-y-[-2px] bg-[#00C6BF] w-[229px] h-[60px] rounded-[5px] text-[20px] font-[600]">Записаться</button>
+                </aside>
+            </div>
+            <img src="./Photo-jeff/image.png" alt="" class="2xl:absolute sm:bottom-0 sm:absolute 2xl:right-0 2xl:bottom-0 left-[40px] 2xl:left-[820px] 2xl:h-[633px] z-[1] 2xl:w-[601px] sm:h-[322px]">
+            <img src="./Photo-jeff/svg.png" alt="" class="2xl:absolute sm:absolute 2xl:w-[716px] sm:bottom-[-180px] 2xl:bottom-0 2xl:right-0 2xl:h-[100%] sm:rotate-90 2xl:rotate-0 z-[0] sm:w-[100%] sm:h-[464px]">
         </section>
     </header>
+
+    <main>
+        <section class="w-[90%] mx-auto flex 2xl:flex-row flex-col 2xl:gap-[20px] gap-[10px]">
+            <div style="transition: background-color 0.4s ease, transform 0.3s ease;" class="bg-[#F0F6F9] hover:scale-[1.1] text-[#141414] flex hover:bg-black hover:text-white flex-col justify-evenly 2xl:top-[-50px] top-[-30px] z-[1] relative rounded-[6px] px-[20px] w-[350px] h-[480px]">
+                <h1 class="pb-[20px] text-[25px] font-[700] border-b-[#C6D9E2] border-b-[1px]">Направления</h1>
+                <ul class="flex mt-[-10px] text-[20px] font-[400] flex-col gap-[20px]">
+                    <li id="text-shadow-hover" style="transition: all 0.3s ease;" class="hover:text-[#00578A] hover:translate-x-[2px] hover:translate-y-[-3px]"><a href="">Акушерство</a></li>
+                    <li id="text-shadow-hover" style="transition: all 0.3s ease;" class="hover:text-[#00578A] hover:translate-x-[2px] hover:translate-y-[-3px]"><a href="">Косметология</a></li>
+                    <li id="text-shadow-hover" style="transition: all 0.3s ease;" class="hover:text-[#00578A] hover:translate-x-[2px] hover:translate-y-[-3px]"><a href="">Хирургия</a></li>
+                    <li id="text-shadow-hover" style="transition: all 0.3s ease;" class="hover:text-[#00578A] hover:translate-x-[2px] hover:translate-y-[-3px]"><a href="">Мануальная терапия</a></li>
+                    <li id="text-shadow-hover" style="transition: all 0.3s ease;" class="hover:text-[#00578A] hover:translate-x-[2px] hover:translate-y-[-3px]"><a href="">Психотерапия</a></li>
+                </ul>
+                <button style="transition: transform 0.3s ease, background-color 0.3s ease;" class="hover:scale-[1.1] hover:border-[1px] hover:border-black hover:bg-white hover:text-[#00578A] w-[100%] bg-[#00578A] h-[62px] rounded-[6px] text-[18px] text-white font-[700]">Все услуги</button>
+            </div>
+
+            <div style="transition: background-color 0.4s ease, transform 0.3s ease;" class="bg-[#F0F6F9] hover:scale-[1.1] text-[#141414] flex hover:bg-black hover:text-white flex-col justify-evenly 2xl:top-[-50px] top-[-30px] z-[1] relative rounded-[6px] px-[20px] w-[350px] h-[480px]">
+                <h1 class="pb-[20px] text-[25px] font-[700] border-b-[#C6D9E2] border-b-[1px]">Диагностика</h1>
+                <ul class="flex mt-[-10px] text-[20px] font-[400] flex-col gap-[20px]">
+                    <li id="text-shadow-hover" style="transition: all 0.3s ease;" class="hover:text-[#00578A] hover:translate-x-[2px] hover:translate-y-[-3px]"><a href="">МРТ</a></li>
+                    <li id="text-shadow-hover" style="transition: all 0.3s ease;" class="hover:text-[#00578A] hover:translate-x-[2px] hover:translate-y-[-3px]"><a href="">КТ</a></li>
+                    <li id="text-shadow-hover" style="transition: all 0.3s ease;" class="hover:text-[#00578A] hover:translate-x-[2px] hover:translate-y-[-3px]"><a href="">УЗИ</a></li>
+                    <li id="text-shadow-hover" style="transition: all 0.3s ease;" class="hover:text-[#00578A] hover:translate-x-[2px] hover:translate-y-[-3px]"><a href="">Рентген</a></li>
+                    <li id="text-shadow-hover" style="transition: all 0.3s ease;" class="hover:text-[#00578A] hover:translate-x-[2px] hover:translate-y-[-3px]"><a href="">Гастроскопия</a></li>
+                </ul>
+                <button style="transition: transform 0.3s ease, background-color 0.3s ease;" class="hover:scale-[1.1] hover:border-[1px] hover:border-black hover:bg-white hover:text-[#00578A] w-[100%] bg-[#00578A] h-[62px] rounded-[6px] text-[18px] text-white font-[700]">Вся диагностика</button>
+            </div>
+
+            <div style="transition: background-color 0.4s ease, transform 0.3s ease;" class="bg-[#F0F6F9] hover:scale-[1.1] text-[#141414] hover:bg-black hover:text-white flex flex-col justify-evenly 2xl:top-[-50px] top-[-30px] z-[1] relative rounded-[6px] px-[20px] w-[350px] h-[480px]">
+                <h1 class="pb-[20px] text-[25px] font-[700] border-b-[#C6D9E2] border-b-[1px]">Врачи</h1>
+                <ul class="flex mt-[-10px] text-[20px] font-[400] flex-col gap-[20px]">
+                    <li id="text-shadow-hover" style="transition: all 0.3s ease;" class="hover:text-[#00578A] hover:translate-x-[2px] hover:translate-y-[-3px]"><a href="">Стоматолог</a></li>
+                    <li id="text-shadow-hover" style="transition: all 0.3s ease;" class="hover:text-[#00578A] hover:translate-x-[2px] hover:translate-y-[-3px]"><a href="">Эндокринолог</a></li>
+                    <li id="text-shadow-hover" style="transition: all 0.3s ease;" class="hover:text-[#00578A] hover:translate-x-[2px] hover:translate-y-[-3px]"><a href="">Хирург</a></li>
+                    <li id="text-shadow-hover" style="transition: all 0.3s ease;" class="hover:text-[#00578A] hover:translate-x-[2px] hover:translate-y-[-3px]"><a href="">Терапевт</a></li>
+                    <li id="text-shadow-hover" style="transition: all 0.3s ease;" class="hover:text-[#00578A] hover:translate-x-[2px] hover:translate-y-[-3px]"><a href="">Невролог</a></li>
+                </ul>
+                <button style="transition: transform 0.3s ease, background-color 0.3s ease;" class="hover:scale-[1.1] hover:border-[1px] hover:border-black hover:bg-white hover:text-[#00578A] w-[100%] bg-[#00578A] h-[62px] rounded-[6px] text-[18px] text-white font-[700]">Все врачи</button>
+            </div>
+
+            <div style="transition: background-color 0.4s ease, transform 0.3s ease;" class="bg-[#F0F6F9] hover:scale-[1.1] text-[#141414] hover:bg-black hover:text-white flex flex-col justify-evenly 2xl:top-[-50px] top-[-30px] z-[1] relative rounded-[6px] px-[20px] w-[350px] h-[480px]">
+                <h1 class="pb-[20px] text-[25px] font-[700] border-b-[#C6D9E2] border-b-[1px]">Детство</h1>
+                <ul class="flex mt-[-10px] text-[20px] font-[400] flex-col gap-[20px]">
+                    <li id="text-shadow-hover" style="transition: all 0.3s ease;" class="hover:text-[#00578A] hover:translate-x-[2px] hover:translate-y-[-3px]"><a href="">Педиатр</a></li>
+                    <li id="text-shadow-hover" style="transition: all 0.3s ease;" class="hover:text-[#00578A] hover:translate-x-[2px] hover:translate-y-[-3px]"><a href="">Стоматолог</a></li>
+                    <li id="text-shadow-hover" style="transition: all 0.3s ease;" class="hover:text-[#00578A] hover:translate-x-[2px] hover:translate-y-[-3px]"><a href="">Дерматолог</a></li>
+                    <li id="text-shadow-hover" style="transition: all 0.3s ease;" class="hover:text-[#00578A] hover:translate-x-[2px] hover:translate-y-[-3px]"><a href="">Офтальмолог</a></li>
+                    <li id="text-shadow-hover" style="transition: all 0.3s ease;" class="hover:text-[#00578A] hover:translate-x-[2px] hover:translate-y-[-3px]"><a href="">Логопед</a></li>
+                </ul>
+                <button style="transition: transform 0.3s ease, background-color 0.3s ease;" class="hover:scale-[1.1] hover:border-[1px] hover:border-black hover:bg-white hover:text-[#00578A] w-[100%] bg-[#00578A] h-[62px] rounded-[6px] text-[18px] text-white font-[700]">Все врачи</button>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

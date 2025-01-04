@@ -33,6 +33,27 @@
         background-size: 400%;
         animation: gradientShift 4s infinite linear;
     }
+    #background-hover:hover{
+        background: radial-gradient(circle, #1e212c8f, #1e212c8f, lightgray, lightgray);
+        background-size: 500%;
+        animation: gradientShift 10s infinite linear;
+    }
+    #border-gradient{
+        border: 2px solid transparent;
+        border-radius: 5px;
+        animation: borderShift 6s infinite;
+    }
+    @keyframes borderShift{
+        0%{
+            border-image: linear-gradient(to right, green, #00BAC6) 1;
+        }
+        50%{
+            border-image: linear-gradient(to left, gray, #00BAC6) 1;
+        }
+        100%{
+            border-image: linear-gradient(to right, #0074B8, lightgray) 1;
+        }
+    }
 
     @keyframes gradientShift {
         0% {
@@ -124,7 +145,7 @@
                     <button style="transition: transform 0.3s ease, background-color 0.3s ease;" class="hover:bg-white hover:shadow-[-5px_3px_10px_black] hover:text-black hover:translate-x-[2px] hover:translate-y-[-2px] bg-[#00C6BF] w-[229px] h-[60px] rounded-[5px] text-[20px] font-[600]">Записаться</button>
                 </aside>
             </div>
-            <img src="./Photo-jeff/image.png" alt="" class="2xl:absolute sm:bottom-0 sm:absolute 2xl:right-0 2xl:bottom-0 left-[40px] 2xl:left-[820px] 2xl:h-[633px] z-[1] 2xl:w-[601px] sm:h-[322px]">
+            <img src="./Main-page-img/image (8).png" alt="" class="2xl:absolute sm:bottom-0 sm:absolute 2xl:right-0 2xl:bottom-0 left-[40px] 2xl:left-[820px] 2xl:h-[633px] z-[1] 2xl:w-[601px] sm:h-[322px]">
             <img src="./Photo-jeff/svg.png" alt="" class="2xl:absolute sm:absolute 2xl:w-[716px] sm:bottom-[-180px] 2xl:bottom-0 2xl:right-0 2xl:h-[100%] sm:rotate-90 2xl:rotate-0 z-[0] sm:w-[100%] sm:h-[464px]">
         </section>
     </header>
@@ -453,6 +474,42 @@
                 <img style="transition: all 0.3s ease;" src="./Photo-jeff/logo_13.png" alt="" class="2xl:ml-0 ml-[60px] cursor-pointer hover:translate-x-[3px] hover:translate-y-[-3px] hover:shadow-[-8px_5px_10px_0_gray]" onclick="location.href='https://kaplife.ru/'">
                 <img style="transition: all 0.3s ease;" src="./Photo-jeff/logo_14.png" alt="" class="2xl:ml-0 ml-[60px] cursor-pointer hover:translate-x-[3px] hover:translate-y-[-3px] hover:shadow-[-8px_5px_10px_0_gray]" onclick="location.href='https://www.vsk.ru/'">
             </div>
+        </section>
+
+        <section class="w-[90%] mx-auto mb-[100px] flex flex-col gap-[30px] 2xl:justify-between 2xl:grid 2xl:grid-rows-[52px_496px] 2xl:grid-cols-[305px_305px_305px_305px]">
+            <div class="flex 2xl:flex-row flex-col 2xl:justify-between 2xl:gap-0 gap-[30px] col-[1/-1]">
+                <h1 class="text-[#141414] text-[34px] 2xl:text-[48px] font-[700] leading-[34px] 2xl:leading-[48px]">Лицензии и сертификаты</h1>
+                <div class="flex items-center gap-[10px]">
+                    <div style="transition: transform 0.2s ease;" class="w-[52px] h-[52px] hover:bg-[#017CC1] hover:text-white active:bg-[#00C6BF] active:text-black cursor-pointer hover:scale-[1.05] rounded-full flex items-center justify-center text-[20px] text-[#017CC1] bg-[#EAF6FF]"><i class="fa-solid fa-chevron-left"></i></div>
+                    <div style="transition: transform 0.2s ease;" class="w-[52px] h-[52px] hover:bg-[#017CC1] hover:text-white active:bg-[#00C6BF] active:text-black cursor-pointer hover:scale-[1.05] rounded-full flex items-center justify-center text-[20px] text-[#017CC1] bg-[#EAF6FF]"><i class="fa-solid fa-chevron-right"></i></div>
+                </div>
+            </div>
+
+            <article id="text-gradient-hover" class="text-[#4F4F4F] flex flex-col gap-[20px]">
+                <div id="border-gradient" style="transition: all 0.5s ease;" class="border-[1px] border-[#BEE1F6] hover:scale-[1.1] rounded-[5px] w-[100%] py-[20px] flex items-center justify-center"><img src="./Photo-jeff/docs1.png" alt="" class="w-[90%] rounded-[5px]"></div>
+                <p class="text-[16px] font-[400]">Сертификат ГОСТ Р ISO 9001-2015</p>                
+            </article>
+
+            <article id="text-gradient-hover" class="text-[#4F4F4F] flex flex-col gap-[20px]">
+                <div id="border-gradient" style="transition: all 0.5s ease;" class="border-[1px] border-[#BEE1F6] hover:scale-[1.1] rounded-[5px] w-[100%] py-[20px] flex items-center justify-center"><img src="./Photo-jeff/docs2.png" alt="" class="w-[90%] rounded-[5px]"></div>
+                <p class="text-[16px] font-[400]">Лицензия Л041-01162-5000369739 (выписка из реестра)</p>                
+            </article>
+
+            <article id="text-gradient-hover" class="text-[#4F4F4F] flex flex-col gap-[20px]">
+                <div id="border-gradient" style="transition: all 0.5s ease;" class="border-[1px] border-[#BEE1F6] hover:scale-[1.1] rounded-[5px] w-[100%] py-[20px] flex items-center justify-center"><img src="./Photo-jeff/docs3.png" alt="" class="w-[90%] rounded-[5px]"></div>
+                <p class="text-[16px] font-[400]">Лицензия Л017-01162-50/00561579 (выписка из реестра)</p>                
+            </article>
+
+            <article id="text-gradient-hover" class="text-[#4F4F4F] flex flex-col gap-[20px]">
+                <div id="border-gradient" style="transition: all 0.5s ease;" class="border-[1px] border-[#BEE1F6] hover:scale-[1.1] rounded-[5px] w-[100%] py-[20px] flex items-center justify-center"><img src="./Photo-jeff/docs4.png" alt="" class="w-[90%] rounded-[5px]"></div>
+                <p class="text-[16px] font-[400]">Лицензия Л041-01162-50/00338967 (выписка из реестра)</p>                
+            </article>
+        </section>
+
+        <section class="w-[90%] mx-auto flex flex-col mb-[80px] gap-[30px]">
+            <h1 id="text-gradient" class="text-[34px] font-[700]">Как нас найти</h1>
+            <img src="./Photo-jeff/map.png" alt="" class="2xl:hidden hover:scale-[1.08] transition-transform duration-[0.3s] ease">
+            <img src="./Photo-jeff/image-end.png" alt="" class="hidden 2xl:inline hover:scale-[1.08] transition-transform duration-[0.3s] ease">
         </section>
     </main> 
 </body>

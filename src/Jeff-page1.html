@@ -12,6 +12,37 @@
     #text-shadow-hover:hover{
         text-shadow: -5px 5px 2px #00578A;
     }
+    #text-gradient{
+        color: transparent;
+        background: radial-gradient(circle, #1E212C, #1E212C, #0074B8, #00BAC6, #0074B8, #00BAC6);
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-size: 400%;
+        animation: gradientShift 8s infinite linear;
+    }
+    #text-gradient-hover:hover{
+        color: transparent;
+        background: radial-gradient(circle, #1E212C, #1E212C, #0074B8, #00BAC6, #0074B8, #00BAC6);
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-size: 400%;
+        animation: gradientShift 4s infinite linear;
+    }
+    #button-gradient-hover:hover{
+        color: transparent;
+        background: radial-gradient(circle, #1E212C, #1E212C, #0074B8, #00BAC6, #0074B8, #00BAC6);
+        background-size: 400%;
+        animation: gradientShift 4s infinite linear;
+    }
+
+    @keyframes gradientShift {
+        0% {
+            background-position: 0% 0%;
+        }
+        100% {
+            background-position: 400% 400%;
+        }
+    }
 </style>
 
 <body class="font-['Nunito']">
@@ -100,7 +131,7 @@
     </header>
 
     <main>
-        <section class="w-[90%] mx-auto flex 2xl:flex-row flex-col 2xl:gap-[20px] gap-[10px]">
+        <section class="w-[90%] mb-[60px] mx-auto flex 2xl:flex-row flex-col 2xl:gap-[20px] gap-[10px]">
             <div style="transition: background-color 0.4s ease, transform 0.3s ease;" class="bg-[#F0F6F9] hover:scale-[1.1] text-[#141414] flex hover:bg-black hover:text-white flex-col justify-evenly 2xl:top-[-50px] top-[-30px] z-[1] relative rounded-[6px] px-[20px] w-[350px] h-[480px]">
                 <h1 class="pb-[20px] text-[25px] font-[700] border-b-[#C6D9E2] border-b-[1px]">Направления</h1>
                 <ul class="flex mt-[-10px] text-[20px] font-[400] flex-col gap-[20px]">
@@ -147,6 +178,26 @@
                     <li id="text-shadow-hover" style="transition: all 0.3s ease;" class="hover:text-[#00578A] hover:translate-x-[2px] hover:translate-y-[-3px]"><a href="">Логопед</a></li>
                 </ul>
                 <button style="transition: transform 0.3s ease, background-color 0.3s ease;" class="hover:scale-[1.1] hover:border-[1px] hover:border-black hover:bg-white hover:text-[#00578A] w-[100%] bg-[#00578A] h-[62px] rounded-[6px] text-[18px] text-white font-[700]">Все врачи</button>
+            </div>
+        </section>
+
+        <section class="w-[90%] mx-auto mb-[100px]">
+            <div style="background: linear-gradient(to right, #02B0C5, #0074B8); transition: transform 0.3s ease;" class="hover:scale-[1.05] rounded-[14px] px-[15px] 2xl:px-[100px] 2xl:py-[80px] py-[30px] flex flex-col 2xl:gap-[60px] gap-[20px]">
+                <div class="flex 2xl:flex-row flex-col justify-start 2xl:justify-between items-start gap-[30px]">
+                    <h1 class="text-white 2xl:text-[48px] text-[34px] font-[700] leading-[34px]">Записаться на приём</h1>
+                    <p class="text-white 2xl:w-[355px] text-[20px] font-[400] leading-[30px]">Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
+                </div>
+                <form class="grid grid-rows-[70px_70px_70px_70px_70px_48px] gap-[10px] 2xl:gap-[20px] grid-cols-1 2xl:grid-rows-[70px_70px] 2xl:grid-cols-[360px_360px_360px]">
+                    <div style="transition: transform 0.3s ease;" class="hover:scale-[1.08] w-[100%] h-[70px] rounded-[5px] bg-white flex items-center justify-center"><select class="text-[#141414] w-[85%] cursor-pointer bg-transparent text-[16px] font-[700]"><option>Выберите направление</option></select></div>
+                    <div style="transition: transform 0.3s ease;" class="hover:scale-[1.08] 2xl:row-[-1/-2] 2xl:col-[1/2] w-[100%] h-[70px] rounded-[5px] bg-white flex items-center justify-center"><select class="text-[#141414] w-[85%] cursor-pointer bg-transparent text-[16px] font-[700]"><option>Выберите врача</option></select></div>
+                    <div style="transition: transform 0.3s ease;" class="hover:scale-[1.08] w-[100%] h-[70px] rounded-[5px] bg-white flex items-center justify-center"><input class=" w-[90%] h-[90%] pl-[8px] outline-none placeholder-[#141414] text-[16px] font-[400]" type="text" placeholder="Ваше имя"></div>
+                    <div style="transition: transform 0.3s ease;" class="hover:scale-[1.08] w-[100%] h-[70px] rounded-[5px] bg-white flex items-center justify-center"><input class=" w-[90%] h-[90%] pl-[8px] outline-none placeholder-[#141414] text-[16px] font-[400]" type="tel" placeholder="Ваш телефон"></div>
+                    <input id="text-gradient-hover" type="submit" value="Оставить заявку" style="transition: transform 0.3s ease" class="hover:bg-black hover:scale-[1.05] mt-[20px] 2xl:mt-0 cursor-pointer bg-[#00C6BF] 2xl:col-[-1/-2] 2xl:row-[1/2] rounded-[5px] w-[100%] h-[70px] text-white text-[16px] font-[700]">
+                    <div class="flex items-start gap-[20px] 2xl:mt-0 mt-[20px]">
+                        <input type="checkbox" style="accent-color: blue;" class="w-[25px] h-[25px] cursor-pointer">
+                        <p class="text-white mt-[3px] text-[14px] font-[400] tracking-[2%] leading-[20px]">Отправляя заявку, вы соглашаетесь на нашу <span class="underline hover:text-black cursor-pointer"><a href="">политику конфиденциальности</a></span></p>
+                    </div>
+                </form>
             </div>
         </section>
     </main>

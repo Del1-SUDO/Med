@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Azam-page2</title>
     <link rel="stylesheet" href="./output.css">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="/fontawesome-free-6.6.0-web/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body class="font-nunito">
     
-    <header class="shadow-[0px_1px_8px_#4F4F4F] p-4 ">
+    <header class="shadow-[0px_1px_8px_#4F4F4F] p-4">
         <section class="2xl:w-[90%] sm:w-[95%] m-auto mt-[20px] mb-[10px] flex items-center justify-between sm:gap-[50px] 2xl:gap-0">
             <article>
                 <img src="./Main-page-img/logo.png" alt="">
             </article> 
 
             <article class="flex items-center gap-[15px] sm:inline-flex 2xl:hidden">
-                <i class="fa-solid fa-phone-flip fa-lg" style="color: #4F4F4F;"></i>
+                <i class="fa-solid fa-phone-flip fa-lg text-[#4F4F4F] hover:text-[#00578A]"></i>
                 <div class="flex items-center text-center gap-[5px]">
-                    <h1 class="text-[#7F8D94]">Меню</h1>
-                    <i class="fa-solid fa-bars fa-2xl" style="color: #4F4F4F;"></i>
+                    <h1 class="text-[#7F8D94] cursor-default hover:text-[#00578A]">Меню</h1>
+                    <i class="fa-solid cursor-pointer fa-bars fa-2xl hover:text-[#00578A] hover:scale-[1.08] transition-all duration-[0.2s] ease-in-out text-[#4F4F4F]"></i>
                 </div>
             </article>
 
@@ -35,7 +35,7 @@
 
             <article class="text-[14px] text-[#4F4F4F] sm:hidden 2xl:block">
                 <h1>info@gormedcentre.ru</h1>
-                <a href="" class="hover:text-black">Заказать звонок</a>
+                <a href="" class="hover:text-black underline">Заказать звонок</a>
             </article>
 
             <article class="text-[14px] text-[#4F4F4F] sm:hidden 2xl:block">
@@ -49,47 +49,47 @@
             </article>
 
             <article class="flex gap-[10px] sm:hidden 2xl:inline-flex">
-                <div class="w-[54px] h-[46px] bg-[#00C6BF] rounded-xl flex items-center justify-center hover:scale-110 duration-500">
+                <div class="cursor-pointer w-[54px] h-[46px] bg-[#00C6BF] rounded-[5px] flex items-center justify-center hover:scale-110 duration-500">
                     <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #ffffff;"></i>
                 </div>
                 <a href="" class="bg-[#E3EFF5] text-[#00578A] w-[196px] h-[46px] rounded-md flex items-center justify-center font-semibold hover:scale-105 duration-500">Личный кабинет</a>
             </article>
-        </section>
+        </nav>
 
-        <section class="w-[90%] m-auto mb-[10px] sm:hidden 2xl:block">
+        <nav class="rounded-[5px] p-[10px] shadow-[0_6px_14px_0_lightgray] w-[95%] m-auto mb-[10px] sm:hidden 2xl:block">
             <div class="flex items-center justify-between">
-                <ul class="flex gap-[20px] text-[#141414] font-semibold">
-                    <select name="" id="" class="cursor-pointer outline-none">
+                <ul class="pl-[15px] flex gap-[20px] text-[#141414] text-[16px] font-[700]">
+                    <select name="" id="" class="cursor-pointer hover:text-[#00578A] bg-transparent outline-none">
                         <option value="">Направления </option>
                     </select>
-                    <li><a href="">Услуги</a></li>
-                    <li><a href="">Врачи</a></li>
-                    <li><a href="">Отзывы</a></li>
-                    <li><a href="">Акции</a></li>
-                    <select name="" id="" class="cursor-pointer outline-none">
+                    <li class="hover:text-[#00578A]"><a href="">Услуги</a></li>
+                    <li class="hover:text-[#00578A]"><a href="">Врачи</a></li>
+                    <li class="hover:text-[#00578A]"><a href="">Отзывы</a></li>
+                    <li class="hover:text-[#00578A]"><a href="">Акции</a></li>
+                    <select name="" id="" class="bg-transparent hover:text-[#00578A] cursor-pointer outline-none">
                         <option value="">О центре </option>
                     </select>
-                    <li><a href="">Детство</a></li>
-                    <li><a href="">Контакты</a></li>
+                    <li class="hover:text-[#00578A]"><a href="">Детство</a></li>
+                    <li class="hover:text-[#00578A]"><a href="">Контакты</a></li>
                 </ul>
                 <section class="flex gap-[20px]">
-                    <div class="flex items-center gap-[5px]">
-                        <i class="fa-solid fa-glasses" style="color: #4F4F4F;"></i>
+                    <div class="flex items-center hover:text-[#00578A] gap-[5px]">
+                        <i class="fa-solid fa-glasses cursor-pointer" style="color: #4F4F4F;"></i>
                         <a href=""><h1>Версия для слабовидящих</h1></a>
                     </div>
                     <button class="text-white bg-[#00578A] rounded-md w-[196px] h-[46px] hover:scale-105 duration-500">Запись на приём</button>
                 </section>
             </div>
-        </section>
+        </nav>
     </header>
-    <div class="flex gap-[20px]  lg:ml-[120px] text-[20px] py-[20px]"><p>Главная</p>
+    <div class="flex gap-[20px] px-[30px] lg:ml-[120px] text-[20px] py-[20px]"><p>Главная</p>
         <p> /</p>
         <p>Врачи</p>
         <p>/</p>
         <p class="text-[gray]"> Невролог</p>
  
         </div>
-        <section class="px-[40px] lg:px-[140px]">
+        <section class="md:px-[40px] lg:px-[140px]">
             <h1 class="font-bold text-[40px]">Невролог</h1>
             <div class="flex flex-col gap-[10px] w-[305px]">
                 <img src="./Photo-azam/photo (1).png" alt="">

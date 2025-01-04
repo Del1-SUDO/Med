@@ -29,7 +29,6 @@
         animation: gradientShift 4s infinite linear;
     }
     #button-gradient-hover:hover{
-        color: transparent;
         background: radial-gradient(circle, #1E212C, #1E212C, #0074B8, #00BAC6, #0074B8, #00BAC6);
         background-size: 400%;
         animation: gradientShift 4s infinite linear;
@@ -274,13 +273,13 @@
         </section>
 
         <section class="w-[90%] 2xl:w-[100%] mb-[80px] mx-auto 2xl:grid relative 2xl:grid-rows-[48px_425px] overflow-hidden 2xl:grid-cols-[753px_753px] flex flex-col gap-[20px]">
-            <h1 id="text-gradient" class="text-[#141414] ml-[80px] col-[1/-1] text-[34px] font-[700]">Акции</h1>
-            <img src="./Photo-jeff/01(1).png" alt="" class="2xl:hidden hover:scale-[1.08] transition-transform duration-[0.3s] ease-in-out">
+            <h1 id="text-gradient" class="text-[#141414] 2xl:ml-[80px] col-[1/-1] text-[34px] font-[700]">Акции</h1>
+            <img src="./Photo-jeff/01(1).png" alt="" class="2xl:hidden hover:scale-[0.96] transition-transform duration-[0.3s] ease-in-out">
             <img src="./Photo-jeff/01.png" alt="" class="ml-[80px] hover:translate-x-[-10px] hidden 2xl:inline transition-transform duration-[0.3s] ease-in-out">
             <img src="./Photo-jeff/02.png" alt="" class="absolute hidden 2xl:inline right-0 bottom-0 hover:translate-x-[-10px] transition-transform duration-[0.3s] ease-in-out">
         </section>
 
-        <section class="w-[90%] mx-auto flex flex-col gap-[30px] 2xl:justify-between 2xl:grid 2xl:grid-rows-[96px_424px] 2xl:grid-cols-[306px_306px_306px_306px]">
+        <section class="w-[90%] mb-[80px] mx-auto flex flex-col gap-[30px] 2xl:justify-between 2xl:grid 2xl:grid-rows-[96px_424px] 2xl:grid-cols-[306px_306px_306px_306px]">
             <div class="flex 2xl:flex-row flex-col 2xl:justify-between 2xl:gap-0 gap-[30px] col-[1/-1]">
                 <h1 class="text-[#141414] text-[34px] 2xl:text-[48px] font-[700] leading-[34px] 2xl:leading-[48px]">Врачи медицинского <br> центра</h1>
                 <div class="flex items-center gap-[10px]">
@@ -312,6 +311,44 @@
                 <h4 id="text-gradient" class="text-[22px] font-[700] 2xl:leading-[50px]">Николаeва Оксана</h4>
                 <p class="text-[18px] text-[#141414] font-[400] 2xl:leading-[15px]">Врач-терапевт</p>
             </article>
+        </section>
+
+        <section class="w-[90%] mx-auto mb-[80px] flex flex-col gap-[30px] 2xl:grid 2xl:grid-rows-[52px_380px] 2xl:justify-between 2xl:grid-cols-[641px_641px]">
+            <div class="flex 2xl:flex-row flex-col 2xl:justify-between 2xl:gap-0 gap-[30px] col-[1/-1]">
+                <h1 class="text-[#141414] text-[34px] 2xl:text-[48px] font-[700] leading-[34px] 2xl:leading-[48px]">Отзывы пациентов</h1>
+                <div class="flex items-center gap-[10px]">
+                    <div style="transition: transform 0.2s ease;" class="w-[52px] h-[52px] hover:bg-[#017CC1] hover:text-white active:bg-[#00C6BF] active:text-black cursor-pointer hover:scale-[1.05] rounded-full flex items-center justify-center text-[20px] text-[#017CC1] bg-[#EAF6FF]"><i class="fa-solid fa-chevron-left"></i></div>
+                    <div style="transition: transform 0.2s ease;" class="w-[52px] h-[52px] hover:bg-[#017CC1] hover:text-white active:bg-[#00C6BF] active:text-black cursor-pointer hover:scale-[1.05] rounded-full flex items-center justify-center text-[20px] text-[#017CC1] bg-[#EAF6FF]"><i class="fa-solid fa-chevron-right"></i></div>
+                </div>
+            </div>
+
+            <aside class="flex flex-col items-start gap-[20px]">
+                <p class="flex flex-col text-[#141414] text-[16px] font-[700]">Балушина Татьяна <span class="text-[#141414] text-[16px] font-[400]">18 апреля 2022</span></p>
+                <div class="flex items-center gap-[5px]">
+                    <i class="text-[#F25A2A] fa-solid fa-star"></i>
+                    <i class="text-[#F25A2A] fa-solid fa-star"></i>
+                    <i class="text-[#F25A2A] fa-solid fa-star"></i>
+                    <i class="text-[#F25A2A] fa-solid fa-star"></i>
+                    <i class="text-[#F25A2A] fa-solid fa-star"></i>
+                </div>
+                <p class="text-[#141414] text-[18px] 2xl:text-[20px] font-[600] leading-[28px]">Попала к Татьяне Ивановне спонтанно. Очень довольна приёмом и проведением ультразвуковой диагностики. Спасибо Наталье Ивановне за внимательное отношение к пациентам! При возникнвении проблем теперь только к ней!</p>
+                <button id="button-gradient-hover" class="border-[1px] border-[#017CC1] hover:text-white hover:bg-black text-[#017CC1] text-[16px] font-[700] rounded-[5px] w-[208px] h-[54px]">Подробнее</button>
+                <p class="text-[#141414] 2xl:text-[20px] text-[18px] font-[600]">Врач: <span class="text-[#017CC1] hover:underline"><a href="">Савина Наталья Владимировна</a></span></p>
+            </aside>
+
+            <aside class="flex flex-col items-start gap-[20px]">
+                <p class="flex flex-col text-[#141414] text-[16px] font-[700]">Трофимов Иван <span class="text-[#141414] text-[16px] font-[400]">24 ноября 2021</span></p>
+                <div class="flex items-center gap-[5px]">
+                    <i class="text-[#F25A2A] fa-solid fa-star"></i>
+                    <i class="text-[#F25A2A] fa-solid fa-star"></i>
+                    <i class="text-[#F25A2A] fa-solid fa-star"></i>
+                    <i class="text-[#F25A2A] fa-solid fa-star"></i>
+                    <i class="text-[#F25A2A] fa-solid fa-star"></i>
+                </div>
+                <p class="text-[#141414] text-[18px] 2xl:text-[20px] font-[600] leading-[28px]">Огромное спасибо врачу за тщательное обследование. Выявили нехватку витамина Д, проблем с щитовидной, к счастью, не оказалось. Доктор приятная в общении и настоящий профессионал!</p>
+                <button id="button-gradient-hover" class="border-[1px] border-[#017CC1] hover:text-white hover:bg-black text-[#017CC1] text-[16px] font-[700] rounded-[5px] w-[208px] h-[54px]">Подробнее</button>
+                <p class="text-[#141414] 2xl:text-[20px] text-[18px] font-[600]">Врач: <span class="text-[#017CC1] hover:underline"><a href="">Крятов Андрей Михайлович</a></span></p>
+            </aside>
         </section>
     </main>
 </body>

@@ -129,7 +129,7 @@
                 </ul>
                 <section class="flex gap-[20px]">
                     <div class="flex items-center hover:text-[#00578A] gap-[5px]">
-                        <i class="fa-solid fa-glasses cursor-pointer" style="color: #4F4F4F;"></i>
+                        <i id="text-gradient" class="fa-solid fa-glasses cursor-pointer" style="color: #4F4F4F;"></i>
                         <a href=""><h1>Версия для слабовидящих</h1></a>
                     </div>
                     <button class="text-white bg-[#00578A] rounded-md w-[196px] h-[46px] hover:scale-105 duration-500">Запись на приём</button>
@@ -532,5 +532,50 @@
             </div>
         </section>
     </main> 
+
+    <footer class="bg-[#F0F6F9] mt-[20px] 2xl:mt-[50px]">
+        <section class="w-[90%] mx-auto 2xl:pt-[20px] pt-[10px] pb-[30px] flex flex-col gap-[25px]">
+            <div class="flex flex-col 2xl:items-center 2xl:flex-row gap-[30px] 2xl:justify-between">
+                <img src="./Photo-jeff/logo.png" alt="" class="w-[100%] 2xl:w-[220px]">
+                <ul class="flex text-[#4F4F4F] 2xl:flex-row 2xl:gap-[60px] 2xl:text-[16px] text-[22px] font-[700] flex-col gap-[10px]">
+                    <li class="hover:text-[#00578A]"><a href="">Направления</a></li>
+                    <li class="hover:text-[#00578A]"><a href="">Услуги</a></li>
+                    <li class="hover:text-[#00578A]"><a href="">Врачи</a></li>
+                    <li class="hover:text-[#00578A]"><a href="">Отзывы</a></li>
+                    <li class="hover:text-[#00578A]"><a href="">Акции</a></li>
+                    <li class="hover:text-[#00578A]"><select class="bg-transparent cursor-pointer"><option><a href="">О цетре</a></option></select></li>
+                    <li class="hover:text-[#00578A]"><a href="">Детство</a></li>
+                    <li class="hover:text-[#00578A]"><a href="">Контакты</a></li>
+                </ul>
+            </div>
+
+            <div class="flex flex-col 2xl:flex-row gap-[25px] 2xl:gap-0 2xl:justify-between">
+                <p class="hidden 2xl:block text-[#4F4F4F] text-[16px] font-[400] leading-[22px]">© 2011-2023 Городской Медицинский <br> Центр. Все права защищены.</p>
+                <h1 class="flex flex-col gap-[5px] text-[#00578A] text-[28px] font-[600]">8 (495) 926-06-03<span>8 (495) 588-08-80</span></h1>
+                <p class="text-[#141414] text-[16px] font-[400] flex flex-col 2xl:gap-[30px] gap-[5px]">г. Мытищи, ул.Рождественская, д.7 <span><span class="text-[#7F8D94]">Ежедневно</span> с 9.00 до 21.00</span></p>
+                <button id="button-gradient-hover" class="w-[350px] 2xl:w-[272px] h-[54px] bg-[#E3EFF5] rounded-[5px] hover:text-white hover:scale-[0.96] transition-transform duration-[0.2s] ease-in-out text-[#4F4F4F] text-[16px] font-[700]">Заказать обратный звонок</button>
+            </div>
+
+            <div class="flex flex-col gap-[30px] 2xl:flex-row 2xl:justify-between">
+                <p class="hidden 2xl:block underline text-[#7F8D94] self-end text-[14px] font-[400] hover:text-black"><a href="">Политика конфиденциальности</a></p>
+                <div class="flex items-center 2xl:items-end gap-[20px] 2xl:ml-[-120px] 2xl:gap-[100px]">
+                    <p onclick="location.href='https://www.whatsapp.com/'" id="text-gradient-hover" class="text-[#4F4F4F] mr-[50px] text-[16px] cursor-pointer font-[400] flex items-center gap-[8px]"><i class="text-[30px] text-[#25D366] fa-brands fa-square-whatsapp"></i>Написать в Whatsapp</p>
+                    <p onclick="location.href='https://vk.com/'" id="text-gradient-hover" class="text-[#4F4F4F] text-[16px] cursor-pointer font-[400] flex items-center gap-[8px]"><i class="text-[30px] text-[#2787F5] fa-brands fa-vk"></i>Vkontakte</p>
+                </div>
+                <div>
+                    <p class="flex flex-col items-start 2xl:items-end gap-[5px] text-[#141414] text-[16px] font-[400]">info@gormedcentre.ru <span><i id="text-gradient" class="mr-[5px] fa-solid fa-glasses"></i> <a href="" class="hover:text-[#00578A]">Версия для слабовидящих</a></span></p>
+                </div>
+            </div>
+            
+            <p class="2xl:hidden text-[#4F4F4F] text-[16px] font-[400] flex flex-col gap-[5px]">© 2011-2023 Городской Медицинский <br> Центр. Все права защищены. <span class="text-[#7F8D94] hover:text-[#00578A] text-[14px] font-[400] underline"><a href="">Политика конфиденциальности</a></span></p>
+        </section>
+
+        <section class="w-[100%] bg-white pt-[20px] 2xl:pb-[10px]">
+            <div class="2xl:flex flex-col items-start w-[90%] 2xl:mb-0 mb-[50px] mx-auto">
+                <p class="text-[14px] font-[400] leading-[18px]">Информация о ценах носит уведомительный характер и не является публичной офертой. Действующий прейскурант, заверенный печатью и подписью руководителя, находится на <br class="hidden 2xl:block"> информационных стендах Центра. Деятельность ООО «ГМЦ» осуществляется на основании действующей лицензии, выданной Департаментом здравоохранения города Москвы.<br><br></p>
+                <p class="text-[14px] font-[400] leading-[18px]">Имеются противопоказания. Необходимо проконсультироваться со специалистом</p>
+            </div>
+        </section>
+    </footer>
 </body>
 </html>

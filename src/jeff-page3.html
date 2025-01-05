@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.6.0-web/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<style>
+    #text-shadow-hover:hover{
+        text-shadow: -5px 5px 2px #00578A;
+    }
+    #text-gradient{
+        color: transparent;
+        background: radial-gradient(circle, #1E212C, #1E212C, #0074B8, #00BAC6, #0074B8, #00BAC6);
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-size: 400%;
+        animation: gradientShift 8s infinite linear;
+    }
+    #text-gradient-hover:hover{
+        color: transparent;
+        background: radial-gradient(circle, #1E212C, #1E212C, #0074B8, #00BAC6, #0074B8, #00BAC6);
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-size: 400%;
+        animation: gradientShift 4s infinite linear;
+    }
+    #button-gradient-hover:hover{
+        background: radial-gradient(circle, #1E212C, #1E212C, #0074B8, #00BAC6, #0074B8, #00BAC6);
+        background-size: 400%;
+        animation: gradientShift 4s infinite linear;
+    }
+    #background-hover:hover{
+        background: radial-gradient(circle, #1e212c8f, #1e212c8f, lightgray, lightgray);
+        background-size: 500%;
+        animation: gradientShift 10s infinite linear;
+    }
+    #border-gradient{
+        border: 2px solid transparent;
+        border-radius: 5px;
+        animation: borderShift 6s infinite;
+    }
+    @keyframes borderShift{
+        0%{
+            border-image: linear-gradient(to right, green, #00BAC6) 1;
+        }
+        50%{
+            border-image: linear-gradient(to left, gray, #00BAC6) 1;
+        }
+        100%{
+            border-image: linear-gradient(to right, #0074B8, lightgray) 1;
+        }
+    }
+
+    @keyframes gradientShift {
+        0% {
+            background-position: 0% 0%;
+        }
+        100% {
+            background-position: 400% 400%;
+        }
+    }
+</style>
+
+<body class="font-['Nunito']">
+    
+    <header class="bg-[#FCFCFC] 2xl:shadow-none shadow-[0_2px_22px_0_lightgray] py-2 sm:pb-1">
+        <nav class="w-[95%] m-auto mb-[10px] shadow-[] flex items-center justify-between sm:gap-[50px] 2xl:gap-0">
+            <article>
+                <img src="./Main-page-img/logo.png" alt="">
+            </article> 
+
+            <article class="flex items-center gap-[15px] sm:inline-flex 2xl:hidden">
+                <i class="fa-solid fa-phone-flip fa-lg text-[#4F4F4F] hover:text-[#00578A]"></i>
+                <div class="flex items-center text-center gap-[5px]">
+                    <h1 class="text-[#7F8D94] cursor-default hover:text-[#00578A]">Меню</h1>
+                    <i class="fa-solid cursor-pointer fa-bars fa-2xl hover:text-[#00578A] hover:scale-[1.08] transition-all duration-[0.2s] ease-in-out text-[#4F4F4F]"></i>
+                </div>
+            </article>
+
+            <article class="sm:hidden 2xl:block">
+                <h1 class="text-[18px] text-[#00578A] font-semibold">8 (495) 926-06-03</h1>
+                <h1 class="text-[14px] text-[#4F4F4F] cursor-pointer" onclick="location.href='https://www.whatsapp.com/'">
+                    <i class="fa-brands fa-square-whatsapp fa-lg" style="color: #25D366;"></i>
+                    <span>Whatsapp</span>
+                </h1>
+            </article>
+
+            <article class="text-[14px] text-[#4F4F4F] sm:hidden 2xl:block">
+                <h1>info@gormedcentre.ru</h1>
+                <a href="" class="hover:text-black underline">Заказать звонок</a>
+            </article>
+
+            <article class="text-[14px] text-[#4F4F4F] sm:hidden 2xl:block">
+                <h1>г. Мытищи,</h1>
+                <h1>ул.Рождественская, д.7</h1>
+            </article>
+
+            <article class="text-[14px] text-[#4F4F4F] sm:hidden 2xl:block">
+                <h1>Ежедневно</h1>
+                <h1>с 9.00 до 21.00</h1>
+            </article>
+
+            <article class="flex gap-[10px] sm:hidden 2xl:inline-flex">
+                <div class="cursor-pointer w-[54px] h-[46px] bg-[#00C6BF] rounded-[5px] flex items-center justify-center hover:scale-110 duration-500">
+                    <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #ffffff;"></i>
+                </div>
+                <a href="" class="bg-[#E3EFF5] text-[#00578A] w-[196px] h-[46px] rounded-md flex items-center justify-center font-semibold hover:scale-105 duration-500">Личный кабинет</a>
+            </article>
+        </nav>
+
+        <nav class="rounded-[5px] p-[10px] shadow-[0_6px_14px_0_lightgray] w-[95%] m-auto mb-[10px] sm:hidden 2xl:block">
+            <div class="flex items-center justify-between">
+                <ul class="pl-[15px] flex gap-[40px] text-[#141414] text-[16px] font-[700]">
+                    <select name="" id="" class="cursor-pointer hover:text-[#00578A] bg-transparent outline-none">
+                        <option value="">Направления </option>
+                    </select>
+                    <li class="hover:text-[#00578A]"><a href="">Услуги</a></li>
+                    <li class="hover:text-[#00578A]"><a href="">Врачи</a></li>
+                    <li class="hover:text-[#00578A]"><a href="">Отзывы</a></li>
+                    <li class="hover:text-[#00578A]"><a href="">Акции</a></li>
+                    <select name="" id="" class="bg-transparent hover:text-[#00578A] cursor-pointer outline-none">
+                        <option value="">О центре </option>
+                    </select>
+                    <li class="hover:text-[#00578A]"><a href="">Детство</a></li>
+                    <li class="hover:text-[#00578A]"><a href="">Контакты</a></li>
+                </ul>
+                <section class="flex gap-[20px]">
+                    <div class="flex items-center hover:text-[#00578A] gap-[5px]">
+                        <i id="text-gradient" class="fa-solid fa-glasses cursor-pointer" style="color: #4F4F4F;"></i>
+                        <a href=""><h1>Версия для слабовидящих</h1></a>
+                    </div>
+                    <button class="text-white bg-[#00578A] rounded-md w-[196px] h-[46px] hover:scale-105 duration-500">Запись на приём</button>
+                </section>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="w-[90%] mb-[80px] mx-auto">
+            <p class="text-[#35353599] text-[16px] my-[30px] font-[400] flex items-center gap-[10px]"><span class="hover:underline hover:text-[#353535]"><a href="">Главная</a></span> / <span class="hover:underline hover:text-[#353535]"><a href="">Акции</a></span></p>
+            <div class="bg-[#F0F6F9] p-[10px] 2xl:flex-row 2xl:items-center flex flex-col gap-[20px] rounded-[14px]">
+                <img src="./Photo-jeff/Mask group.png" alt="" style="transition: transform 0.3s ease;" class="hover:scale-[1.08] 2xl:hidden">
+                <img src="./Photo-jeff/close-up-portrait-of-young-attractive-mother-kissing-his-crying-baby-kid-looking-aside-with-frightened-face-expression-family-concept 1.png" alt="" class="hidden 2xl:inline">
+                <aside class="flex flex-col 2xl:items-start 2xl:gap-[20px] gap-[10px]">
+                    <h1 class="text-[#141414] 2xl:hidden text-[28px] font-[600]">Программы ведения беременности</h1>
+                    <h1 class="hidden 2xl:block text-[#141414] text-[32px] font-[600] leading-[40px]">Программы наблюдения за здоровьем <br> ребенка</h1>
+                    <h3 class="text-[#017CC1] text-[22px] font-[700]">10% скидка на все услуги центра</h3>
+                    <p class="text-[#141414] 2xl:hidden text-[20px] font-[400]">Получите комплексную медицинскую помощь и поддержку на протяжении всего периода беременности</p>
+                    <p class="hidden 2xl:block text-[#141414] text-[20px] font-[400] leading-[30px]">Поручите наблюдение за здоровьем ребенка квалифицированному <br> и опытному врачу</p>
+                    <div class="flex flex-col 2xl:flex-row gap-[10px] items-center">
+                        <button style="transition: transform 0.3s ease;" id="button-gradient-hover" class="w-[100%] 2xl:w-[209px] hover:scale-[1.08] h-[54px] rounded-[5px] bg-[#00C6BF] text-white text-[16px] font-[700]">Записаться</button>
+                        <p class="text-[#4F4F4F] 2xl:text-start text-center text-[14px] font-[400]">Акция действует до: <br> 17 ноября 2023 года</p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="w-[90%] 2xl:w-[75%] mx-auto text-[#141414] flex flex-col gap-[40px]">
+            <div class="flex flex-col items-start gap-[20px]">
+                <p class="text-[20px] font-[600] leading-[28px]">Внимание! Всем участникам программ наблюдения за здоровьем ребенка на время действия программ предоставляется 10% скидка на все услуги центра (кроме стоматологии и косметологии).</p>
+                <p class="text-[18px] font-[400] leading-[28px]">Городской Медицинский Центр предлагает программы наблюдения за здоровьем детей. Квалифицированные специалисты Центра постараются решить все проблемы со здоровьем, сопутствующие периоду роста ребёнка.</>
+            </div>
+            <div class="flex flex-col items-start gap-[20px]">
+                <h1 class="text-[28px] font-[600] leading-[38px]">Преимущества годового контракта</h1>
+                <p class="text-[18px] font-[400] leading-[28px]">Самый надежный способ обезопасить своего ребёнка – поручить наблюдение за его здоровьем квалифицированному, опытному врачу. Для того чтобы упростить Вам решение этой задачи. Программа включает в себя все необходимые составляющие, обеспечивающие полноценную медицинскую заботу о самых маленьких пациентах, и выстроена таким образом, чтобы не только сопроводить Вашего ребёнка квалифицированной помощью опытных специалистов, но и облегчить бремя родительской заботы, насколько это возможно. Вашего ребёнка будет вести персональный педиатр, который в течение года будет следить за здоровьем Вашего ребёнка. <br><br> В случае, если Вы проживаете в Мытищинском районе к стоимости программ добавляется коэффициент 1,1.</p>
+            </div>
+            <div class="flex flex-col items-start gap-[20px]">
+                <h1 class="text-[28px] font-[600] leading-[38px]">Программа здоровье ребенка от 0 до года</h1>
+                <p class="text-[18px] font-[400] leading-[28px]">Первый год жизни ребёнка особенно важен: именно в возрасте от 0 до года закладываются основы нашего здоровья. От того, как будет построена забота о ребёнке в этот период, во многом зависит, что ждёт его в будущем – насколько крепким станет его иммунитет, какими болезнями он будет болеть, к каким заболеваниям окажется предрасположен. Не случайно 90% всех прививок, плановых осмотров, анализов и исследований приходится именно на первый год жизни. Родители, исповедующие ответственный подход к здоровью ребёнка, неизбежно задумываются, как лучше всего обеспечить необходимый контроль за здоровьем своего малыша.</p>
+            </div>
+
+            <div class="flex flex-col mb-[50px]">
+                <div class="border-y-[1px] py-[15px] border-[#B6B6B6] 2xl:flex items-center justify-between">
+                    <h1 id="text-gradient" class="text-[22px] font-[700]">Комплекс «Медосмотр к 1 году»</h1>
+                    <p class="text-[#F25A2A] text-[28px] font-[600] flex 2xl:flex-row items-end gap-[40px]"><span class="text-[#141414] line-through text-[18px] font-[400]">15 350 ₽</span>12 000 ₽</p>
+                </div>
+                <div class="border-b-[1px] py-[15px] border-[#B6B6B6] 2xl:flex items-center justify-between">
+                    <h1 id="text-gradient" class="text-[22px] font-[700]">Комплекс «Медосмотр в 3 года»</h1>
+                    <p class="text-[#F25A2A] text-[28px] font-[600] 2xl:flex-row flex items-end gap-[40px]"><span class="text-[#141414] line-through text-[18px] font-[400]">14 250 ₽</span>11 000 ₽</p>
+                </div>
+                <div class="border-b-[1px] py-[15px] border-[#B6B6B6] 2xl:flex items-center justify-between">
+                    <h1 id="text-gradient" class="text-[22px] font-[700]">Комплекс «Медосмотр в 6 лет»</h1>
+                    <p class="text-[#F25A2A] text-[28px] font-[600] 2xl:flex-row flex items-end gap-[40px]"><span class="text-[#141414] line-through text-[18px] font-[400]">26 850 ₽</span>20 000 ₽</p>
+                </div>
+                <div class="border-b-[1px] py-[15px] border-[#B6B6B6] 2xl:flex items-center justify-between">
+                    <h1 id="text-gradient" class="text-[22px] font-[700]">Программа диспансеризации «Кроха»</h1>
+                    <p class="text-[#F25A2A] text-[28px] font-[600] 2xl:flex-row flex items-end gap-[40px]"><span class="text-[#141414] line-through text-[18px] font-[400]">22 320 ₽</span>18 600 ₽</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-start 2xl:gap-[30px] gap-[20px] mb-[50px]">
+                <h1 class="text-[28px] font-[600] leading-[38px]">Программа здоровье ребенка от года до трех лет</h1>
+                <p class="text-[18px] font-[400] leading-[28px]">Вашему ребёнку – от года до трех. Это – особенная эпоха в его жизни, когда малыш начинает осознавать свои желания, учится управлять ими, думать и говорить. Именно в этом возрасте закладываются основы личности: от того как ребёнок освоит процессы коммуникации, какие навыки общения он приобретёт, – будет ли он добиваться своего или, наоборот, искать компромиссы, насколько эмоционально привыкнет переживать свои успехи и неудачи, – во многом зависит, как сложится его жизнь в дальнейшем. На эти годы приходится пик информационной и эмоциональной нагрузки. А это значит, что здоровье малыша нуждается в профессиональной медицинской защите.</p>
+                <div id="text-gradient-hover" class="text-[#00578A] text-[20px] font-[600] cursor-pointer flex items-center gap-[10px]"><i class="fa-solid fa-arrow-left"></i> <a href="">Назад к акциям</a></div>
+            </div>
+        </section>
+
+        <section class="w-[90%] hidden mb-[80px] mx-auto flex-col gap-[30px] 2xl:justify-between 2xl:grid 2xl:grid-rows-[96px_424px] 2xl:grid-cols-[306px_306px_306px_306px]">
+            <div class="flex 2xl:flex-row flex-col 2xl:justify-between 2xl:gap-0 gap-[30px] col-[1/-1]">
+                <h1 class="text-[#141414] text-[34px] 2xl:text-[48px] font-[700] self-end">Врачи</h1>
+                <div class="flex items-center gap-[10px]">
+                    <div style="transition: transform 0.2s ease;" class="w-[52px] h-[52px] hover:bg-[#017CC1] hover:text-white active:bg-[#00C6BF] active:text-black cursor-pointer hover:scale-[1.05] rounded-full flex items-center justify-center text-[20px] text-[#017CC1] bg-[#EAF6FF]"><i class="fa-solid fa-chevron-left"></i></div>
+                    <div style="transition: transform 0.2s ease;" class="w-[52px] h-[52px] hover:bg-[#017CC1] hover:text-white active:bg-[#00C6BF] active:text-black cursor-pointer hover:scale-[1.05] rounded-full flex items-center justify-center text-[20px] text-[#017CC1] bg-[#EAF6FF]"><i class="fa-solid fa-chevron-right"></i></div>
+                </div>
+            </div>
+
+            <article class="flex flex-col items-start">
+                <img src="./Photo-jeff/photo.png" alt="" style="transition: all 0.3s ease;" class="w-[100%] hover:shadow-[-10px_10px_10px_0_gray] hover:rotate-2 hover:translate-x-[5px] hover:translate-y-[-5px]">
+                <h4 id="text-gradient" class="text-[22px] font-[700] 2xl:leading-[50px]">Крятов Андрей</h4>
+                <p class="text-[18px] text-[#141414] font-[400] 2xl:leading-[15px]">Главный врач, уролог, андролог</p>
+            </article>
+
+            <article class="flex flex-col items-start">
+                <img src="./Photo-jeff/photo(1).png" alt="" style="transition: all 0.3s ease;" class="w-[100%] hover:shadow-[-10px_10px_10px_0_gray] hover:-rotate-2 hover:translate-x-[5px] hover:translate-y-[-5px]">
+                <h4 id="text-gradient" class="text-[22px] font-[700] 2xl:leading-[50px]">Савина Наталья</h4>
+                <p class="text-[18px] text-[#141414] font-[400] 2xl:leading-[15px]">Врач-невролог</p>
+            </article>
+
+            <article class="flex flex-col items-start">
+                <img src="./Photo-jeff/photo(2).png" alt="" style="transition: all 0.3s ease;" class="w-[100%] hover:shadow-[-10px_10px_10px_0_gray] hover:rotate-2 hover:translate-x-[5px] hover:translate-y-[-5px]">
+                <h4 id="text-gradient" class="text-[22px] font-[700] 2xl:leading-[50px]">Зотова Гюзяль</h4>
+                <p class="text-[18px] text-[#141414] font-[400] 2xl:leading-[15px]">Врач-терапевт</p>
+            </article>
+
+            <article class="flex flex-col items-start">
+                <img src="./Photo-jeff/photo(3).png" alt="" style="transition: all 0.3s ease;" class="w-[100%] hover:shadow-[-10px_10px_10px_0_gray] hover:-rotate-2 hover:translate-x-[5px] hover:translate-y-[-5px]">
+                <h4 id="text-gradient" class="text-[22px] font-[700] 2xl:leading-[50px]">Николаeва Оксана</h4>
+                <p class="text-[18px] text-[#141414] font-[400] 2xl:leading-[15px]">Врач-терапевт</p>
+            </article>
+        </section>
+        
+        <section class="flex 2xl:flex-col flex-col-reverse">
+            <div class="w-[90%] mx-auto mb-[80px]">
+                <div style="background: linear-gradient(to right, #02B0C5, #0074B8); transition: transform 0.3s ease;" class="hover:scale-[1.05] rounded-[14px] px-[15px] 2xl:px-[100px] 2xl:py-[80px] py-[30px] flex flex-col 2xl:gap-[60px] gap-[20px]">
+                    <div class="flex 2xl:flex-row flex-col justify-start 2xl:gap-[275px] items-start gap-[30px]">
+                        <h1 class="text-white 2xl:text-[48px] text-[34px] font-[700] leading-[34px]">Записаться на приём</h1>
+                        <p class="text-white 2xl:w-[355px] text-[20px] font-[400] leading-[30px]">Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
+                    </div>
+                    <form class="grid grid-rows-[70px_70px_70px_70px_70px_48px] gap-[10px] 2xl:gap-[20px] grid-cols-1 2xl:grid-rows-[70px_70px] 2xl:grid-cols-[360px_360px_360px]">
+                        <div style="transition: transform 0.3s ease;" class="hover:scale-[1.08] w-[100%] h-[70px] rounded-[5px] bg-white flex items-center justify-center"><select class="text-[#141414] w-[85%] cursor-pointer bg-transparent text-[16px] font-[700]"><option>Выберите направление</option></select></div>
+                        <div style="transition: transform 0.3s ease;" class="hover:scale-[1.08] 2xl:row-[-1/-2] 2xl:col-[1/2] w-[100%] h-[70px] rounded-[5px] bg-white flex items-center justify-center"><select class="text-[#141414] w-[85%] cursor-pointer bg-transparent text-[16px] font-[700]"><option>Выберите врача</option></select></div>
+                        <div style="transition: transform 0.3s ease;" class="hover:scale-[1.08] w-[100%] h-[70px] rounded-[5px] bg-white flex items-center justify-center"><input class=" w-[90%] h-[90%] pl-[8px] outline-none placeholder-[#141414] text-[16px] font-[400]" type="text" placeholder="Ваше имя"></div>
+                        <div style="transition: transform 0.3s ease;" class="hover:scale-[1.08] w-[100%] h-[70px] rounded-[5px] bg-white flex items-center justify-center"><input class=" w-[90%] h-[90%] pl-[8px] outline-none placeholder-[#141414] text-[16px] font-[400]" type="tel" placeholder="Ваш телефон"></div>
+                        <input id="text-gradient-hover" type="submit" value="Оставить заявку" style="transition: transform 0.3s ease" class="hover:bg-black hover:scale-[1.05] mt-[20px] 2xl:mt-0 cursor-pointer bg-[#00C6BF] 2xl:col-[-1/-2] 2xl:row-[1/2] rounded-[5px] w-[100%] h-[70px] text-white text-[16px] font-[700]">
+                        <div class="flex items-start gap-[20px] 2xl:mt-0 mt-[20px]">
+                            <input type="checkbox" style="accent-color: blue;" class="w-[25px] h-[25px] cursor-pointer">
+                            <p class="text-white mt-[3px] text-[14px] font-[400] tracking-[2%] leading-[20px]">Отправляя заявку, вы соглашаетесь на нашу <span class="underline hover:text-black cursor-pointer"><a href="">политику конфиденциальности</a></span></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="w-[90%] mx-auto 2xl:hidden flex flex-col mb-[80px] gap-[30px]">
+                <h1 id="text-gradient" class="text-[34px] font-[700]">Как нас найти</h1>
+                <img src="./Photo-jeff/map.png" alt="" class="2xl:hidden hover:scale-[1.08] transition-transform duration-[0.3s] ease">
+                <img src="./Photo-jeff/image-end.png" alt="" class="hidden 2xl:inline hover:scale-[1.08] transition-transform duration-[0.3s] ease">
+            </div>
+
+            <div class="w-[90%] mx-auto mb-[100px] flex flex-col gap-[30px] 2xl:justify-between 2xl:grid 2xl:grid-rows-[52px_496px] 2xl:grid-cols-[305px_305px_305px_305px]">
+                <div class="flex 2xl:flex-row flex-col 2xl:justify-between 2xl:gap-0 gap-[30px] col-[1/-1]">
+                    <h1 id="text-gradient" class="text-[#141414] text-[34px] 2xl:text-[48px] font-[700] leading-[34px] 2xl:leading-[48px]">Лицензии и сертификаты</h1>
+                    <div class="flex items-center gap-[10px]">
+                        <div style="transition: transform 0.2s ease;" class="w-[52px] h-[52px] hover:bg-[#017CC1] hover:text-white active:bg-[#00C6BF] active:text-black cursor-pointer hover:scale-[1.05] rounded-full flex items-center justify-center text-[20px] text-[#017CC1] bg-[#EAF6FF]"><i class="fa-solid fa-chevron-left"></i></div>
+                        <div style="transition: transform 0.2s ease;" class="w-[52px] h-[52px] hover:bg-[#017CC1] hover:text-white active:bg-[#00C6BF] active:text-black cursor-pointer hover:scale-[1.05] rounded-full flex items-center justify-center text-[20px] text-[#017CC1] bg-[#EAF6FF]"><i class="fa-solid fa-chevron-right"></i></div>
+                    </div>
+                </div>
+    
+                <article id="text-gradient-hover" class="text-[#4F4F4F] flex flex-col gap-[20px]">
+                    <div id="border-gradient" style="transition: all 0.5s ease;" class="border-[1px] border-[#BEE1F6] hover:scale-[1.1] rounded-[5px] w-[100%] py-[20px] flex items-center justify-center"><img src="./Photo-jeff/docs1.png" alt="" class="w-[90%] rounded-[5px]"></div>
+                    <p class="text-[16px] font-[400]">Сертификат ГОСТ Р ISO 9001-2015</p>                
+                </article>
+    
+                <article id="text-gradient-hover" class="text-[#4F4F4F] hidden 2xl:flex flex-col gap-[20px]">
+                    <div id="border-gradient" style="transition: all 0.5s ease;" class="border-[1px] border-[#BEE1F6] hover:scale-[1.1] rounded-[5px] w-[100%] py-[20px] flex items-center justify-center"><img src="./Photo-jeff/docs2.png" alt="" class="w-[90%] rounded-[5px]"></div>
+                    <p class="text-[16px] font-[400]">Лицензия Л041-01162-5000369739 (выписка из реестра)</p>                
+                </article>
+    
+                <article id="text-gradient-hover" class="text-[#4F4F4F] hidden 2xl:flex flex-col gap-[20px]">
+                    <div id="border-gradient" style="transition: all 0.5s ease;" class="border-[1px] border-[#BEE1F6] hover:scale-[1.1] rounded-[5px] w-[100%] py-[20px] flex items-center justify-center"><img src="./Photo-jeff/docs3.png" alt="" class="w-[90%] rounded-[5px]"></div>
+                    <p class="text-[16px] font-[400]">Лицензия Л017-01162-50/00561579 (выписка из реестра)</p>                
+                </article>
+    
+                <article id="text-gradient-hover" class="text-[#4F4F4F] hidden 2xl:flex flex-col gap-[20px]">
+                    <div id="border-gradient" style="transition: all 0.5s ease;" class="border-[1px] border-[#BEE1F6] hover:scale-[1.1] rounded-[5px] w-[100%] py-[20px] flex items-center justify-center"><img src="./Photo-jeff/docs4.png" alt="" class="w-[90%] rounded-[5px]"></div>
+                    <p class="text-[16px] font-[400]">Лицензия Л041-01162-50/00338967 (выписка из реестра)</p>                
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#F0F6F9] mt-[20px] 2xl:mt-[50px]">
+        <section class="w-[90%] mx-auto 2xl:pt-[20px] pt-[10px] pb-[30px] flex flex-col gap-[25px]">
+            <div class="flex flex-col 2xl:items-center 2xl:flex-row gap-[30px] 2xl:justify-between">
+                <img src="./Photo-jeff/logo.png" alt="" class="w-[100%] 2xl:w-[220px]">
+                <ul class="flex text-[#4F4F4F] 2xl:flex-row 2xl:gap-[60px] 2xl:text-[16px] text-[22px] font-[700] flex-col gap-[10px]">
+                    <li class="hover:text-[#00578A]"><a href="">Направления</a></li>
+                    <li class="hover:text-[#00578A]"><a href="">Услуги</a></li>
+                    <li class="hover:text-[#00578A]"><a href="">Врачи</a></li>
+                    <li class="hover:text-[#00578A]"><a href="">Отзывы</a></li>
+                    <li class="hover:text-[#00578A]"><a href="">Акции</a></li>
+                    <li class="hover:text-[#00578A]"><select class="bg-transparent cursor-pointer"><option><a href="">О цетре</a></option></select></li>
+                    <li class="hover:text-[#00578A]"><a href="">Детство</a></li>
+                    <li class="hover:text-[#00578A]"><a href="">Контакты</a></li>
+                </ul>
+            </div>
+
+            <div class="flex flex-col 2xl:flex-row gap-[25px] 2xl:gap-0 2xl:justify-between">
+                <p class="hidden 2xl:block text-[#4F4F4F] text-[16px] font-[400] leading-[22px]">© 2011-2023 Городской Медицинский <br> Центр. Все права защищены.</p>
+                <h1 class="flex flex-col gap-[5px] text-[#00578A] text-[28px] font-[600]">8 (495) 926-06-03<span>8 (495) 588-08-80</span></h1>
+                <p class="text-[#141414] text-[16px] font-[400] flex flex-col 2xl:gap-[30px] gap-[5px]">г. Мытищи, ул.Рождественская, д.7 <span><span class="text-[#7F8D94]">Ежедневно</span> с 9.00 до 21.00</span></p>
+                <button id="button-gradient-hover" class="w-[350px] 2xl:w-[272px] h-[54px] bg-[#E3EFF5] rounded-[5px] hover:text-white hover:scale-[0.96] transition-transform duration-[0.2s] ease-in-out text-[#4F4F4F] text-[16px] font-[700]">Заказать обратный звонок</button>
+            </div>
+
+            <div class="flex flex-col gap-[30px] 2xl:flex-row 2xl:justify-between">
+                <p class="hidden 2xl:block underline text-[#7F8D94] self-end text-[14px] font-[400] hover:text-black"><a href="">Политика конфиденциальности</a></p>
+                <div class="flex items-center 2xl:items-end gap-[20px] 2xl:ml-[-120px] 2xl:gap-[100px]">
+                    <p onclick="location.href='https://www.whatsapp.com/'" id="text-gradient-hover" class="text-[#4F4F4F] mr-[50px] text-[16px] cursor-pointer font-[400] flex items-center gap-[8px]"><i class="text-[30px] text-[#25D366] fa-brands fa-square-whatsapp"></i>Написать в Whatsapp</p>
+                    <p onclick="location.href='https://vk.com/'" id="text-gradient-hover" class="text-[#4F4F4F] text-[16px] cursor-pointer font-[400] flex items-center gap-[8px]"><i class="text-[30px] text-[#2787F5] fa-brands fa-vk"></i>Vkontakte</p>
+                </div>
+                <div>
+                    <p class="flex flex-col items-start 2xl:items-end gap-[5px] text-[#141414] text-[16px] font-[400]">info@gormedcentre.ru <span><i id="text-gradient" class="mr-[5px] fa-solid fa-glasses"></i> <a href="" class="hover:text-[#00578A]">Версия для слабовидящих</a></span></p>
+                </div>
+            </div>
+            
+            <p class="2xl:hidden text-[#4F4F4F] text-[16px] font-[400] flex flex-col gap-[5px]">© 2011-2023 Городской Медицинский <br> Центр. Все права защищены. <span class="text-[#7F8D94] hover:text-[#00578A] text-[14px] font-[400] underline"><a href="">Политика конфиденциальности</a></span></p>
+        </section>
+
+        <section class="w-[100%] bg-white pt-[20px] 2xl:pb-[10px]">
+            <div class="2xl:flex flex-col items-start w-[90%] 2xl:mb-0 mb-[50px] mx-auto">
+                <p class="text-[14px] font-[400] leading-[18px]">Информация о ценах носит уведомительный характер и не является публичной офертой. Действующий прейскурант, заверенный печатью и подписью руководителя, находится на <br class="hidden 2xl:block"> информационных стендах Центра. Деятельность ООО «ГМЦ» осуществляется на основании действующей лицензии, выданной Департаментом здравоохранения города Москвы.<br><br></p>
+                <p class="text-[14px] font-[400] leading-[18px]">Имеются противопоказания. Необходимо проконсультироваться со специалистом</p>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>

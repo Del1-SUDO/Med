@@ -29,10 +29,30 @@
         animation: gradientShift 4s infinite linear;
     }
     #button-gradient-hover:hover{
-        color: transparent;
         background: radial-gradient(circle, #1E212C, #1E212C, #0074B8, #00BAC6, #0074B8, #00BAC6);
         background-size: 400%;
         animation: gradientShift 4s infinite linear;
+    }
+    #background-hover:hover{
+        background: radial-gradient(circle, #1e212c8f, #1e212c8f, lightgray, lightgray);
+        background-size: 500%;
+        animation: gradientShift 10s infinite linear;
+    }
+    #border-gradient{
+        border: 2px solid transparent;
+        border-radius: 5px;
+        animation: borderShift 6s infinite;
+    }
+    @keyframes borderShift{
+        0%{
+            border-image: linear-gradient(to right, green, #00BAC6) 1;
+        }
+        50%{
+            border-image: linear-gradient(to left, gray, #00BAC6) 1;
+        }
+        100%{
+            border-image: linear-gradient(to right, #0074B8, lightgray) 1;
+        }
     }
 
     @keyframes gradientShift {
@@ -46,8 +66,8 @@
 </style>
 
 <body class="font-['Nunito']">
-    <header class="bg-[#FCFCFC] sm:shadow-[0_2px_22px_0_lightgray] py-2 sm:pb-1">
-        <nav class="w-[95%] m-auto mb-[10px] flex items-center justify-between sm:gap-[50px] 2xl:gap-0">
+    <header class="bg-[#FCFCFC] 2xl:shadow-none shadow-[0_2px_22px_0_lightgray] py-2 sm:pb-1">
+        <nav class="w-[95%] m-auto mb-[10px] shadow-[] flex items-center justify-between sm:gap-[50px] 2xl:gap-0">
             <article>
                 <img src="./Main-page-img/logo.png" alt="">
             </article> 
@@ -62,7 +82,7 @@
 
             <article class="sm:hidden 2xl:block">
                 <h1 class="text-[18px] text-[#00578A] font-semibold">8 (495) 926-06-03</h1>
-                <h1 class="text-[14px] text-[#4F4F4F]">
+                <h1 class="text-[14px] text-[#4F4F4F] cursor-pointer" onclick="location.href='https://www.whatsapp.com/'">
                     <i class="fa-brands fa-square-whatsapp fa-lg" style="color: #25D366;"></i>
                     <span>Whatsapp</span>
                 </h1>
@@ -109,7 +129,7 @@
                 </ul>
                 <section class="flex gap-[20px]">
                     <div class="flex items-center hover:text-[#00578A] gap-[5px]">
-                        <i class="fa-solid fa-glasses cursor-pointer" style="color: #4F4F4F;"></i>
+                        <i id="text-gradient" class="fa-solid fa-glasses cursor-pointer" style="color: #4F4F4F;"></i>
                         <a href=""><h1>Версия для слабовидящих</h1></a>
                     </div>
                     <button class="text-white bg-[#00578A] rounded-md w-[196px] h-[46px] hover:scale-105 duration-500">Запись на приём</button>
@@ -125,7 +145,7 @@
                     <button style="transition: transform 0.3s ease, background-color 0.3s ease;" class="hover:bg-white hover:shadow-[-5px_3px_10px_black] hover:text-black hover:translate-x-[2px] hover:translate-y-[-2px] bg-[#00C6BF] w-[229px] h-[60px] rounded-[5px] text-[20px] font-[600]">Записаться</button>
                 </aside>
             </div>
-            <img src="./Photo-jeff/image.png" alt="" class="2xl:absolute sm:bottom-0 sm:absolute 2xl:right-0 2xl:bottom-0 left-[40px] 2xl:left-[820px] 2xl:h-[633px] z-[1] 2xl:w-[601px] sm:h-[322px]">
+            <img src="./Main-page-img/image (8).png" alt="" class="2xl:absolute sm:bottom-0 sm:absolute 2xl:right-0 2xl:bottom-0 left-[40px] 2xl:left-[820px] 2xl:h-[633px] z-[1] 2xl:w-[601px] sm:h-[322px]">
             <img src="./Photo-jeff/svg.png" alt="" class="2xl:absolute sm:absolute 2xl:w-[716px] sm:bottom-[-180px] 2xl:bottom-0 2xl:right-0 2xl:h-[100%] sm:rotate-90 2xl:rotate-0 z-[0] sm:w-[100%] sm:h-[464px]">
         </section>
     </header>
@@ -181,9 +201,9 @@
             </div>
         </section>
 
-        <section class="w-[90%] mx-auto mb-[100px]">
+        <section class="w-[90%] mx-auto mb-[80px]">
             <div style="background: linear-gradient(to right, #02B0C5, #0074B8); transition: transform 0.3s ease;" class="hover:scale-[1.05] rounded-[14px] px-[15px] 2xl:px-[100px] 2xl:py-[80px] py-[30px] flex flex-col 2xl:gap-[60px] gap-[20px]">
-                <div class="flex 2xl:flex-row flex-col justify-start 2xl:justify-between items-start gap-[30px]">
+                <div class="flex 2xl:flex-row flex-col justify-start 2xl:gap-[275px] items-start gap-[30px]">
                     <h1 class="text-white 2xl:text-[48px] text-[34px] font-[700] leading-[34px]">Записаться на приём</h1>
                     <p class="text-white 2xl:w-[355px] text-[20px] font-[400] leading-[30px]">Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
                 </div>
@@ -200,6 +220,362 @@
                 </form>
             </div>
         </section>
-    </main>
+
+        <section class="w-[90%] mx-auto mb-[80px] text-[#141414] 2xl:grid grid-rows-[400px_243px] grid-cols-[560px_580px] 2xl:gap-[30px_0] 2xl:justify-between flex flex-col gap-[20px] 2xl:items-center items-start">
+            <aside class="flex flex-col gap-[30px]">
+                <h1 class="text-[34px] 2xl:text-[48px] font-[700] 2xl:leading-[48px] leading-[34px]">Немного о нашем медицинском центре</h1>
+                <p class="text-[17px] 2xl:text-[18px] font-[400] leading-[28px]">Многопрофильное амбулаторно-поликлиническое учреждение для детей и взрослых в городе Мытищи. Мы предоставляем платные медицинские услуги и занимаем лидирующие позиции среди медицинских учреждений города Мытищи. У нас ежегодно обслуживаются более 150000 пациентов.</p>
+            </aside>
+            <img src="./Photo-jeff/image2.png" alt="" class="hidden 2xl:inline">
+            <div class="bg-[#F0F6F9] 2xl:col-[1/-1] cursor-default 2xl:row-[-1/-2] text-[#141414] 2xl:gap-0 2xl:justify-evenly rounded-[5px] p-[20px] gap-[20px] grid grid-rows-[137px_157px] grid-cols-[145px_165px] 2xl:grid-rows-[153px] 2xl:grid-cols-[260px_264px_260px_260px]">
+                <div id="text-gradient-hover" style="transition: all 0.2s ease;" class="flex hover:scale-[1.04] hover:shadow-[0_0_10px_0_lightgray] flex-col gap-[8px] items-start">
+                    <img src="./Photo-jeff/cross.png" alt="">
+                    <h4 class="text-[#017CC1] text-[21px] font-[700]">>10</h4>
+                    <p class="text-[14px] font-[400]">лет заботы о вашем здоровье</p>
+                </div>
+                <div id="text-gradient-hover" style="transition: all 0.2s ease;" class="flex hover:scale-[1.04] hover:shadow-[0_0_10px_0_lightgray] flex-col gap-[8px] items-start">
+                    <img src="./Photo-jeff/cross.png" alt="">
+                    <h4 class="text-[#017CC1] text-[21px] font-[700]">150</h4>
+                    <p class="text-[14px] font-[400]">квалифицированных специалистов</p>
+                </div>
+                <div id="text-gradient-hover" style="transition: all 0.2s ease;" class="flex hover:scale-[1.04] hover:shadow-[0_0_10px_0_lightgray] flex-col gap-[8px] items-start">
+                    <img src="./Photo-jeff/cross.png" alt="">
+                    <h4 class="text-[#017CC1] text-[21px] font-[700]">3 000</h4>
+                    <p class="text-[14px] font-[400]">медицинских услуг по всем направлениям</p>
+                </div>
+                <div id="text-gradient-hover" style="transition: all 0.2s ease;" class="flex hover:scale-[1.04] hover:shadow-[0_0_10px_0_lightgray] flex-col gap-[8px] items-start">
+                    <img src="./Photo-jeff/cross.png" alt="">
+                    <h4 class="text-[#017CC1] text-[21px] font-[700]">День в день</h4>
+                    <p class="text-[14px] font-[400]">прием врача любой специальности в день обращения</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-[90%] mb-[80px] mx-auto flex flex-col gap-[20px] 2xl:grid 2xl:grid-rows-[52px_424px] 2xl:gap-[30px_0] 2xl:justify-between 2xl:grid-cols-[305px_305px_305px_305px]">
+            <div class="flex 2xl:flex-row flex-col 2xl:justify-between 2xl:gap-0 gap-[30px] col-[1/-1]">
+                <h1 class="text-[#141414] text-[34px] 2xl:text-[48px] font-[700]">Популярные услуги</h1>
+                <div class="flex items-center gap-[10px]">
+                    <div style="transition: transform 0.2s ease;" class="w-[52px] h-[52px] hover:bg-[#017CC1] hover:text-white active:bg-[#00C6BF] active:text-black cursor-pointer hover:scale-[1.05] rounded-full flex items-center justify-center text-[20px] text-[#017CC1] bg-[#EAF6FF]"><i class="fa-solid fa-chevron-left"></i></div>
+                    <div style="transition: transform 0.2s ease;" class="w-[52px] h-[52px] hover:bg-[#017CC1] hover:text-white active:bg-[#00C6BF] active:text-black cursor-pointer hover:scale-[1.05] rounded-full flex items-center justify-center text-[20px] text-[#017CC1] bg-[#EAF6FF]"><i class="fa-solid fa-chevron-right"></i></div>
+                </div>
+            </div>
+
+            <article id="text-gradient-hover" style="transition: transform 0.3s ease;" class="2xl:hover:scale-[1.05] flex flex-col text-[#141414] w-[100%] rounded-[5px] bg-[#F0F6F9]">
+                <img src="./Photo-jeff/img.png" alt="" style="transition: all 0.3s ease;" class="hover:shadow-[-5px_10px_10px_gray] hover:translate-y-[-5px]">
+                <div class="flex flex-col gap-[30px] items-center p-[30px]">
+                    <h1 class="text-[20px] font-[600] leading-[28px]">Магнитно-резонансная томография (МРТ)</h1>
+                    <button id="button-gradient-hover" class="w-[100%] h-[54px] rounded-[5px] bg-[#00578A] text-white text-[16px] font-[700]">Записаться</button>
+                </div>
+            </article>
+
+            <article id="text-gradient-hover" style="transition: transform 0.3s ease;" class="2xl:hover:scale-[1.05] flex flex-col text-[#141414] w-[100%] rounded-[5px] bg-[#F0F6F9]">
+                <img src="./Photo-jeff/image(1).png" alt="" style="transition: all 0.3s ease;" class="hover:shadow-[-5px_10px_10px_gray] hover:translate-y-[-5px]">
+                <div class="flex flex-col gap-[60px] items-center p-[30px]">
+                    <h1 class="text-[20px] font-[600] leading-[28px]">Гастроскопия</h1>
+                    <button id="button-gradient-hover" class="w-[100%] h-[54px] rounded-[5px] bg-[#00578A] text-white text-[16px] font-[700]">Записаться</button>
+                </div>
+            </article>
+
+            <article id="text-gradient-hover" style="transition: transform 0.3s ease;" class="2xl:hover:scale-[1.05] flex flex-col text-[#141414] w-[100%] rounded-[5px] bg-[#F0F6F9]">
+                <img src="./Photo-jeff/image(2).png" alt="" style="transition: all 0.3s ease;" class="hover:shadow-[-5px_10px_10px_gray] hover:translate-y-[-5px]">
+                <div class="flex flex-col gap-[60px] items-center p-[30px]">
+                    <h1 class="text-[20px] font-[600] leading-[28px]">Прием гинеколога</h1>
+                    <button id="button-gradient-hover" class="w-[100%] h-[54px] rounded-[5px] bg-[#00578A] text-white text-[16px] font-[700]">Записаться</button>
+                </div>
+            </article>
+
+            <article id="text-gradient-hover" style="transition: transform 0.3s ease;" class="2xl:hover:scale-[1.05] flex flex-col text-[#141414] w-[100%] rounded-[5px] bg-[#F0F6F9]">
+                <img src="./Photo-jeff/image(3).png" alt="" style="transition: all 0.3s ease;" class="hover:shadow-[-5px_10px_10px_gray] hover:translate-y-[-5px]">
+                <div class="flex flex-col gap-[30px] items-center p-[30px]">
+                    <h1 class="text-[20px] font-[600] leading-[28px]">Лабораторная диагностика</h1>
+                    <button id="button-gradient-hover" class="w-[100%] h-[54px] rounded-[5px] bg-[#00578A] text-white text-[16px] font-[700]">Записаться</button>
+                </div>
+            </article>
+        </section>
+
+        <section class="w-[90%] 2xl:w-[100%] mb-[80px] mx-auto 2xl:grid relative 2xl:grid-rows-[48px_425px] overflow-hidden 2xl:grid-cols-[753px_753px] flex flex-col gap-[20px]">
+            <h1 id="text-gradient" class="text-[#141414] 2xl:ml-[80px] col-[1/-1] text-[34px] font-[700]">Акции</h1>
+            <img src="./Photo-jeff/01(1).png" alt="" class="2xl:hidden hover:scale-[0.96] transition-transform duration-[0.3s] ease-in-out">
+            <img src="./Photo-jeff/01.png" alt="" class="ml-[80px] hover:translate-x-[-10px] hidden 2xl:inline transition-transform duration-[0.3s] ease-in-out">
+            <img src="./Photo-jeff/02.png" alt="" class="absolute hidden 2xl:inline right-0 bottom-0 hover:translate-x-[-10px] transition-transform duration-[0.3s] ease-in-out">
+        </section>
+
+        <section class="w-[90%] mb-[80px] mx-auto flex flex-col gap-[30px] 2xl:justify-between 2xl:grid 2xl:grid-rows-[96px_424px] 2xl:grid-cols-[306px_306px_306px_306px]">
+            <div class="flex 2xl:flex-row flex-col 2xl:justify-between 2xl:gap-0 gap-[30px] col-[1/-1]">
+                <h1 class="text-[#141414] text-[34px] 2xl:text-[48px] font-[700] leading-[34px] 2xl:leading-[48px]">Врачи медицинского <br> центра</h1>
+                <div class="flex items-center gap-[10px]">
+                    <div style="transition: transform 0.2s ease;" class="w-[52px] h-[52px] hover:bg-[#017CC1] hover:text-white active:bg-[#00C6BF] active:text-black cursor-pointer hover:scale-[1.05] rounded-full flex items-center justify-center text-[20px] text-[#017CC1] bg-[#EAF6FF]"><i class="fa-solid fa-chevron-left"></i></div>
+                    <div style="transition: transform 0.2s ease;" class="w-[52px] h-[52px] hover:bg-[#017CC1] hover:text-white active:bg-[#00C6BF] active:text-black cursor-pointer hover:scale-[1.05] rounded-full flex items-center justify-center text-[20px] text-[#017CC1] bg-[#EAF6FF]"><i class="fa-solid fa-chevron-right"></i></div>
+                </div>
+            </div>
+
+            <article class="flex flex-col items-start">
+                <img src="./Photo-jeff/photo.png" alt="" style="transition: all 0.3s ease;" class="w-[100%] hover:shadow-[-10px_10px_10px_0_gray] hover:rotate-2 hover:translate-x-[5px] hover:translate-y-[-5px]">
+                <h4 id="text-gradient" class="text-[22px] font-[700] 2xl:leading-[50px]">Крятов Андрей</h4>
+                <p class="text-[18px] text-[#141414] font-[400] 2xl:leading-[15px]">Главный врач, уролог, андролог</p>
+            </article>
+
+            <article class="flex flex-col items-start">
+                <img src="./Photo-jeff/photo(1).png" alt="" style="transition: all 0.3s ease;" class="w-[100%] hover:shadow-[-10px_10px_10px_0_gray] hover:-rotate-2 hover:translate-x-[5px] hover:translate-y-[-5px]">
+                <h4 id="text-gradient" class="text-[22px] font-[700] 2xl:leading-[50px]">Савина Наталья</h4>
+                <p class="text-[18px] text-[#141414] font-[400] 2xl:leading-[15px]">Врач-невролог</p>
+            </article>
+
+            <article class="flex flex-col items-start">
+                <img src="./Photo-jeff/photo(2).png" alt="" style="transition: all 0.3s ease;" class="w-[100%] hover:shadow-[-10px_10px_10px_0_gray] hover:rotate-2 hover:translate-x-[5px] hover:translate-y-[-5px]">
+                <h4 id="text-gradient" class="text-[22px] font-[700] 2xl:leading-[50px]">Зотова Гюзяль</h4>
+                <p class="text-[18px] text-[#141414] font-[400] 2xl:leading-[15px]">Врач-терапевт</p>
+            </article>
+
+            <article class="flex flex-col items-start">
+                <img src="./Photo-jeff/photo(3).png" alt="" style="transition: all 0.3s ease;" class="w-[100%] hover:shadow-[-10px_10px_10px_0_gray] hover:-rotate-2 hover:translate-x-[5px] hover:translate-y-[-5px]">
+                <h4 id="text-gradient" class="text-[22px] font-[700] 2xl:leading-[50px]">Николаeва Оксана</h4>
+                <p class="text-[18px] text-[#141414] font-[400] 2xl:leading-[15px]">Врач-терапевт</p>
+            </article>
+        </section>
+
+        <section class="w-[90%] mx-auto mb-[80px] flex flex-col gap-[30px] 2xl:grid 2xl:grid-rows-[52px_380px] 2xl:justify-between 2xl:grid-cols-[641px_641px]">
+            <div class="flex 2xl:flex-row flex-col 2xl:justify-between 2xl:gap-0 gap-[30px] col-[1/-1]">
+                <h1 class="text-[#141414] text-[34px] 2xl:text-[48px] font-[700] leading-[34px] 2xl:leading-[48px]">Отзывы пациентов</h1>
+                <div class="flex items-center gap-[10px]">
+                    <div style="transition: transform 0.2s ease;" class="w-[52px] h-[52px] hover:bg-[#017CC1] hover:text-white active:bg-[#00C6BF] active:text-black cursor-pointer hover:scale-[1.05] rounded-full flex items-center justify-center text-[20px] text-[#017CC1] bg-[#EAF6FF]"><i class="fa-solid fa-chevron-left"></i></div>
+                    <div style="transition: transform 0.2s ease;" class="w-[52px] h-[52px] hover:bg-[#017CC1] hover:text-white active:bg-[#00C6BF] active:text-black cursor-pointer hover:scale-[1.05] rounded-full flex items-center justify-center text-[20px] text-[#017CC1] bg-[#EAF6FF]"><i class="fa-solid fa-chevron-right"></i></div>
+                </div>
+            </div>
+
+            <aside class="flex flex-col items-start gap-[20px]">
+                <p class="flex flex-col text-[#141414] text-[16px] font-[700]">Балушина Татьяна <span class="text-[#141414] text-[16px] font-[400]">18 апреля 2022</span></p>
+                <div class="flex items-center gap-[5px]">
+                    <i class="text-[#F25A2A] fa-solid fa-star"></i>
+                    <i class="text-[#F25A2A] fa-solid fa-star"></i>
+                    <i class="text-[#F25A2A] fa-solid fa-star"></i>
+                    <i class="text-[#F25A2A] fa-solid fa-star"></i>
+                    <i class="text-[#F25A2A] fa-solid fa-star"></i>
+                </div>
+                <p class="text-[#141414] text-[18px] 2xl:text-[20px] font-[600] leading-[28px]">Попала к Татьяне Ивановне спонтанно. Очень довольна приёмом и проведением ультразвуковой диагностики. Спасибо Наталье Ивановне за внимательное отношение к пациентам! При возникнвении проблем теперь только к ней!</p>
+                <button id="button-gradient-hover" class="border-[1px] border-[#017CC1] hover:text-white hover:bg-black text-[#017CC1] text-[16px] font-[700] rounded-[5px] w-[208px] h-[54px]">Подробнее</button>
+                <p class="text-[#141414] 2xl:text-[20px] text-[18px] font-[600]">Врач: <span class="text-[#017CC1] hover:underline"><a href="">Савина Наталья Владимировна</a></span></p>
+            </aside>
+
+            <aside class="2xl:flex hidden flex-col items-start gap-[20px]">
+                <p class="flex flex-col text-[#141414] text-[16px] font-[700]">Трофимов Иван <span class="text-[#141414] text-[16px] font-[400]">24 ноября 2021</span></p>
+                <div class="flex items-center gap-[5px]">
+                    <i class="text-[#F25A2A] fa-solid fa-star"></i>
+                    <i class="text-[#F25A2A] fa-solid fa-star"></i>
+                    <i class="text-[#F25A2A] fa-solid fa-star"></i>
+                    <i class="text-[#F25A2A] fa-solid fa-star"></i>
+                    <i class="text-[#F25A2A] fa-solid fa-star"></i>
+                </div>
+                <p class="text-[#141414] text-[18px] 2xl:text-[20px] font-[600] leading-[28px]">Огромное спасибо врачу за тщательное обследование. Выявили нехватку витамина Д, проблем с щитовидной, к счастью, не оказалось. Доктор приятная в общении и настоящий профессионал!</p>
+                <button id="button-gradient-hover" class="border-[1px] border-[#017CC1] hover:text-white hover:bg-black text-[#017CC1] text-[16px] font-[700] rounded-[5px] w-[208px] h-[54px]">Подробнее</button>
+                <p class="text-[#141414] 2xl:text-[20px] text-[18px] font-[600]">Врач: <span class="text-[#017CC1] hover:underline"><a href="">Крятов Андрей Михайлович</a></span></p>
+            </aside>
+        </section>
+
+        <section class="w-[90%] cursor-none mx-auto mb-[80px] flex flex-col gap-[30px] 2xl:gap-[50px] 2xl:grid 2xl:grid-rows-[48px_505px] 2xl:justify-between 2xl:grid-cols-[417px_417px_417px]">
+            <div class="flex 2xl:flex-row flex-col 2xl:justify-between 2xl:gap-0 gap-[30px] col-[1/-1]">
+                <h1 class="text-[#141414] text-[34px] 2xl:text-[48px] font-[700] leading-[34px] 2xl:leading-[48px]">Технологии и оборудование</h1>
+                <div class="flex items-center gap-[10px]">
+                    <div style="transition: transform 0.2s ease;" class="w-[52px] h-[52px] hover:bg-[#017CC1] hover:text-white active:bg-[#00C6BF] active:text-black cursor-pointer hover:scale-[1.05] rounded-full flex items-center justify-center text-[20px] text-[#017CC1] bg-[#EAF6FF]"><i class="fa-solid fa-chevron-left"></i></div>
+                    <div style="transition: transform 0.2s ease;" class="w-[52px] h-[52px] hover:bg-[#017CC1] hover:text-white active:bg-[#00C6BF] active:text-black cursor-pointer hover:scale-[1.05] rounded-full flex items-center justify-center text-[20px] text-[#017CC1] bg-[#EAF6FF]"><i class="fa-solid fa-chevron-right"></i></div>
+                </div>
+            </div>
+
+            <article style="transition: transform 0.3s ease;" class="hover:scale-[1.08] flex flex-col items-start">
+                <img src="./Photo-jeff/УЗИ Aplio 400.png" alt="">
+                <div class="p-[20px] flex flex-col gap-[10px] bg-[#F0F6F9]">
+                    <h1 id="text-gradient" class="flex flex-col gap-[5px] text-[32px] font-[600]"><span class="text-[14px] font-[400]">УЗИ Аппарат</span>УЗИ Aplio 400</h1>
+                    <p class="text-[#4F4F4F] text-[16px] font-[400] leading-[22px]">Аппарат УЗИ экспертного класса, обеспечивающий удивительно четкое изображение, превосходную производительность и эргономичное рабочее место с полностью настраиваемой консолью.</p>
+                </div>
+            </article>
+
+            <article style="transition: transform 0.3s ease;" class="hidden 2xl:flex flex-col items-start hover:scale-[1.08]">
+                <img src="./Photo-jeff/Колоноскоп Olympus cF-Q150l.png" alt="">
+                <div class="p-[20px] flex flex-col gap-[10px] bg-[#F0F6F9]">
+                    <h1 id="text-gradient" class="flex flex-col gap-[5px] text-[32px] font-[600]"><span class="text-[14px] font-[400]">Колоноскоп</span>Olympus cF-Q150l</h1>
+                    <p class="text-[#4F4F4F] text-[16px] font-[400] leading-[22px]">Аппарат УЗИ экспертного класса, обеспечивающий удивительно четкое изображение, превосходную производительность и эргономичное рабочее место с полностью настраиваемой консолью.</p>
+                </div>
+            </article>
+
+            <article style="transition: transform 0.3s ease;" class="hover:scale-[1.08] flex-col hidden 2xl:flex items-start">
+                <img src="./Photo-jeff/ПроГраф 5000.png" alt="">
+                <div class="p-[20px] flex flex-col gap-[10px] bg-[#F0F6F9]">
+                    <h1 id="text-gradient" class="flex flex-col gap-[5px] text-[32px] font-[600]"><span class="text-[14px] font-[400]">Рентген-аппарат</span>ПроГраф 5000</h1>
+                    <p class="text-[#4F4F4F] text-[16px] font-[400] leading-[22px]">ПроГраф-5000 с конструкцией штатива типа С-дуга предназначен для проведения флюорографического обследования органов грудной клетки пациента в прямой и боковой проекциях в положении стоя.</p>
+                </div>
+            </article>
+        </section>
+
+        <section style="background: linear-gradient(to right, #02B4C6,#0074B8);">
+            <div class="w-[90%] mx-auto text-white 2xl:py-[100px] py-[50px] flex flex-col items-start gap-[30px] 2xl:justify-between 2xl:grid 2xl:grid-rows-[54px_403px] 2xl:grid-cols-[306px_306px_306px_306px]">
+                <div class="flex items-center justify-between col-[1/-1]">
+                    <h1 class="text-[34px] 2xl:text-[48px] 2xl:leading-[48px] font-[700] leading-[34px]">Блог от наших специалистов</h1>
+                    <button id="button-gradient-hover" class="hidden 2xl:inline w-[204px] h-[54px] rounded-[5px] bg-[#00C6BF] text-white text-[16px] font-[700]">Читать все</button>
+                </div>
+
+                <article class="flex flex-col gap-[20px]">
+                    <img src="./Photo-jeff/Img2.png" alt="" style="transition: all 0.3s ease;" class="hover:scale-[0.98] hover:rotate-180">
+                    <h4 class="text-[25px] font-[700] leading-[28px]">Кто находится в группе риска по глаукоме?</h4>
+                    <p class="text-[18px] font-[400] leading-[22px]">Глаукома — прогрессирующее заболевание, приводящее к безвозвратной слепоте, в основе кото...</p>
+                    <div class="flex items-center gap-[15px]">
+                        <img src="./Photo-jeff/Image.png" alt="" class="hover:scale-[1.1] transition-transform duration-[0.3s] ease-in-out">
+                        <p class="flex flex-col text-[14px] font-[400]"><span class="font-[700]">Савина Наталья</span>30 авг. 2023 • 5 минут на чтение</p>
+                    </div>
+                </article>
+                <button id="button-gradient-hover" class="2xl:hidden mt-[20px] bg-[#00C6BF] text-white w-[100%] h-[54px] rounded-[5px] text-[16px] font-[700]">Читать все</button>
+                
+                <article class="2xl:flex hidden flex-col gap-[20px]">
+                    <img src="./Photo-jeff/Img2.png" alt="" style="transition: all 0.3s ease;" class="hover:scale-[0.98] hover:-rotate-180">
+                    <h4 class="text-[25px] font-[700] leading-[28px]">Кто находится в группе риска по глаукоме?</h4>
+                    <p class="text-[18px] font-[400] leading-[22px]">Глаукома — прогрессирующее заболевание, приводящее к безвозвратной слепоте, в основе кото...</p>
+                    <div class="flex items-center gap-[15px]">
+                        <img src="./Photo-jeff/Image.png" alt="" class="hover:scale-[1.1] transition-transform duration-[0.3s] ease-in-out">
+                        <p class="flex flex-col text-[14px] font-[400]"><span class="font-[700]">Савина Наталья</span>30 авг. 2023 • 5 минут на чтение</p>
+                    </div>
+                </article>
+
+                <article class="2xl:flex hidden flex-col gap-[20px]">
+                    <img src="./Photo-jeff/Img2.png" alt="" style="transition: all 0.3s ease;" class="hover:scale-[0.98] hover:rotate-180">
+                    <h4 class="text-[25px] font-[700] leading-[28px]">Кто находится в группе риска по глаукоме?</h4>
+                    <p class="text-[18px] font-[400] leading-[22px]">Глаукома — прогрессирующее заболевание, приводящее к безвозвратной слепоте, в основе кото...</p>
+                    <div class="flex items-center gap-[15px]">
+                        <img src="./Photo-jeff/Image.png" alt="" class="hover:scale-[1.1] transition-transform duration-[0.3s] ease-in-out">
+                        <p class="flex flex-col text-[14px] font-[400]"><span class="font-[700]">Савина Наталья</span>30 авг. 2023 • 5 минут на чтение</p>
+                    </div>
+                </article>
+
+                <article class="2xl:flex hidden flex-col gap-[20px]">
+                    <img src="./Photo-jeff/Img2.png" alt="" style="transition: all 0.3s ease;" class="hover:scale-[0.98] hover:-rotate-180">
+                    <h4 class="text-[25px] font-[700] leading-[28px]">Кто находится в группе риска по глаукоме?</h4>
+                    <p class="text-[18px] font-[400] leading-[22px]">Глаукома — прогрессирующее заболевание, приводящее к безвозвратной слепоте, в основе кото...</p>
+                    <div class="flex items-center gap-[15px]">
+                        <img src="./Photo-jeff/Image.png" alt="" class="hover:scale-[1.1] transition-transform duration-[0.3s] ease-in-out">
+                        <p class="flex flex-col text-[14px] font-[400]"><span class="font-[700]">Савина Наталья</span>30 авг. 2023 • 5 минут на чтение</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="w-[90%] mx-auto 2xl:py-[100px] py-[80px] justify-between flex flex-col items-center 2xl:gap-[40px] gap-[20px]">
+            <h1 class="col-[1/-1] text-[#141414] text-[34px] 2xl:text-[48px] text-center font-[700]">Наши партнёры</h1>
+            <div class="w-[100%] gap-[10px_0] justify-between grid grid-rows-[60px_60px_60px_60px_60px] grid-cols-[112px_112px_112px] 2xl:grid-rows-[95px_95px] 2xl:grid-cols-[178px_178px_178px_178px_178px_178px_178px]">
+                <img style="transition: all 0.3s ease;" class="cursor-pointer hover:translate-x-[3px] hover:translate-y-[-3px] hover:shadow-[-8px_5px_10px_0_gray]" onclick="location.href='https://www.mldc-nt.ru/'" src="./Photo-jeff/logo_1.png" alt="">
+                <img style="transition: all 0.3s ease;" class="cursor-pointer hover:translate-x-[3px] hover:translate-y-[-3px] hover:shadow-[-8px_5px_10px_0_gray]" onclick="location.href='https://igcmd.ru/'" src="./Photo-jeff/logo_2.png" alt="">
+                <img style="transition: all 0.3s ease;" class="cursor-pointer hover:translate-x-[3px] hover:translate-y-[-3px] hover:shadow-[-8px_5px_10px_0_gray]" onclick="location.href='https://www.renins.ru/'" src="./Photo-jeff/logo_3.png" alt="">
+                <img style="transition: all 0.3s ease;" class="cursor-pointer hover:translate-x-[3px] hover:translate-y-[-3px] hover:shadow-[-8px_5px_10px_0_gray]" onclick="location.href='https://www.ingos.ru/'" src="./Photo-jeff/logo_4.png" alt="">
+                <img style="transition: all 0.3s ease;" class="cursor-pointer hover:translate-x-[3px] hover:translate-y-[-3px] hover:shadow-[-8px_5px_10px_0_gray]" onclick="location.href='https://corp.rms-med.ru/'" src="./Photo-jeff/logo_5.png" alt="">
+                <img style="transition: all 0.3s ease;" class="cursor-pointer hover:translate-x-[3px] hover:translate-y-[-3px] hover:shadow-[-8px_5px_10px_0_gray]" onclick="location.href='https://zettains.ru/'" src="./Photo-jeff/logo_6.png" alt="">
+                <img style="transition: all 0.3s ease;" class="cursor-pointer hover:translate-x-[3px] hover:translate-y-[-3px] hover:shadow-[-8px_5px_10px_0_gray]" onclick="location.href='https://bestdoctor.ru/'" src="./Photo-jeff/logo_7.png" alt="">
+                <img style="transition: all 0.3s ease;" class="cursor-pointer hover:translate-x-[3px] hover:translate-y-[-3px] hover:shadow-[-8px_5px_10px_0_gray]" onclick="location.href='https://www.alfastrah.ru'" src="./Photo-jeff/logo_8.png" alt="">
+                <img style="transition: all 0.3s ease;" class="cursor-pointer hover:translate-x-[3px] hover:translate-y-[-3px] hover:shadow-[-8px_5px_10px_0_gray]" onclick="location.href='https://www.sogaz.ru/'" src="./Photo-jeff/logo_9.png" alt="">
+                <img style="transition: all 0.3s ease;" class="cursor-pointer hover:translate-x-[3px] hover:translate-y-[-3px] hover:shadow-[-8px_5px_10px_0_gray]" onclick="location.href='https://prodoctorov.ru/'" src="./Photo-jeff/logo_10.png" alt="">
+                <img style="transition: all 0.3s ease;" class="cursor-pointer hover:translate-x-[3px] hover:translate-y-[-3px] hover:shadow-[-8px_5px_10px_0_gray]" onclick="location.href='https://mo.reso-med.com/'" src="./Photo-jeff/logo_11.png" alt="">
+                <img style="transition: all 0.3s ease;" class="cursor-pointer hover:translate-x-[3px] hover:translate-y-[-3px] hover:shadow-[-8px_5px_10px_0_gray]" onclick="location.href='https://www.allianz.com/en.html'" src="./Photo-jeff/logo_12.png" alt="">
+                <img style="transition: all 0.3s ease;" src="./Photo-jeff/logo_13.png" alt="" class="2xl:ml-0 ml-[60px] cursor-pointer hover:translate-x-[3px] hover:translate-y-[-3px] hover:shadow-[-8px_5px_10px_0_gray]" onclick="location.href='https://kaplife.ru/'">
+                <img style="transition: all 0.3s ease;" src="./Photo-jeff/logo_14.png" alt="" class="2xl:ml-0 ml-[60px] cursor-pointer hover:translate-x-[3px] hover:translate-y-[-3px] hover:shadow-[-8px_5px_10px_0_gray]" onclick="location.href='https://www.vsk.ru/'">
+            </div>
+        </section>
+
+        <section class="w-[90%] mx-auto mb-[100px] flex flex-col gap-[30px] 2xl:justify-between 2xl:grid 2xl:grid-rows-[52px_496px] 2xl:grid-cols-[305px_305px_305px_305px]">
+            <div class="flex 2xl:flex-row flex-col 2xl:justify-between 2xl:gap-0 gap-[30px] col-[1/-1]">
+                <h1 id="text-gradient" class="text-[#141414] text-[34px] 2xl:text-[48px] font-[700] leading-[34px] 2xl:leading-[48px]">Лицензии и сертификаты</h1>
+                <div class="flex items-center gap-[10px]">
+                    <div style="transition: transform 0.2s ease;" class="w-[52px] h-[52px] hover:bg-[#017CC1] hover:text-white active:bg-[#00C6BF] active:text-black cursor-pointer hover:scale-[1.05] rounded-full flex items-center justify-center text-[20px] text-[#017CC1] bg-[#EAF6FF]"><i class="fa-solid fa-chevron-left"></i></div>
+                    <div style="transition: transform 0.2s ease;" class="w-[52px] h-[52px] hover:bg-[#017CC1] hover:text-white active:bg-[#00C6BF] active:text-black cursor-pointer hover:scale-[1.05] rounded-full flex items-center justify-center text-[20px] text-[#017CC1] bg-[#EAF6FF]"><i class="fa-solid fa-chevron-right"></i></div>
+                </div>
+            </div>
+
+            <article id="text-gradient-hover" class="text-[#4F4F4F] flex flex-col gap-[20px]">
+                <div id="border-gradient" style="transition: all 0.5s ease;" class="border-[1px] border-[#BEE1F6] hover:scale-[1.1] rounded-[5px] w-[100%] py-[20px] flex items-center justify-center"><img src="./Photo-jeff/docs1.png" alt="" class="w-[90%] rounded-[5px]"></div>
+                <p class="text-[16px] font-[400]">Сертификат ГОСТ Р ISO 9001-2015</p>                
+            </article>
+
+            <article id="text-gradient-hover" class="text-[#4F4F4F] hidden 2xl:flex flex-col gap-[20px]">
+                <div id="border-gradient" style="transition: all 0.5s ease;" class="border-[1px] border-[#BEE1F6] hover:scale-[1.1] rounded-[5px] w-[100%] py-[20px] flex items-center justify-center"><img src="./Photo-jeff/docs2.png" alt="" class="w-[90%] rounded-[5px]"></div>
+                <p class="text-[16px] font-[400]">Лицензия Л041-01162-5000369739 (выписка из реестра)</p>                
+            </article>
+
+            <article id="text-gradient-hover" class="text-[#4F4F4F] hidden 2xl:flex flex-col gap-[20px]">
+                <div id="border-gradient" style="transition: all 0.5s ease;" class="border-[1px] border-[#BEE1F6] hover:scale-[1.1] rounded-[5px] w-[100%] py-[20px] flex items-center justify-center"><img src="./Photo-jeff/docs3.png" alt="" class="w-[90%] rounded-[5px]"></div>
+                <p class="text-[16px] font-[400]">Лицензия Л017-01162-50/00561579 (выписка из реестра)</p>                
+            </article>
+
+            <article id="text-gradient-hover" class="text-[#4F4F4F] hidden 2xl:flex flex-col gap-[20px]">
+                <div id="border-gradient" style="transition: all 0.5s ease;" class="border-[1px] border-[#BEE1F6] hover:scale-[1.1] rounded-[5px] w-[100%] py-[20px] flex items-center justify-center"><img src="./Photo-jeff/docs4.png" alt="" class="w-[90%] rounded-[5px]"></div>
+                <p class="text-[16px] font-[400]">Лицензия Л041-01162-50/00338967 (выписка из реестра)</p>                
+            </article>
+        </section>
+
+        <section class="w-[90%] mx-auto flex flex-col mb-[80px] gap-[30px]">
+            <h1 id="text-gradient" class="text-[34px] font-[700]">Как нас найти</h1>
+            <img src="./Photo-jeff/map.png" alt="" class="2xl:hidden hover:scale-[1.08] transition-transform duration-[0.3s] ease">
+            <img src="./Photo-jeff/image-end.png" alt="" class="hidden 2xl:inline hover:scale-[1.08] transition-transform duration-[0.3s] ease">
+        </section>
+
+        <section class="w-[90%] mx-auto mb-[80px]">
+            <div style="background: linear-gradient(to right, #02B0C5, #0074B8); transition: transform 0.3s ease;" class="hover:scale-[1.05] rounded-[14px] px-[15px] 2xl:px-[100px] 2xl:py-[80px] py-[30px] flex flex-col 2xl:gap-[60px] gap-[20px]">
+                <div class="flex 2xl:flex-row flex-col justify-start 2xl:gap-[275px] items-start gap-[30px]">
+                    <h1 class="text-white 2xl:text-[48px] text-[34px] font-[700] leading-[34px]">Записаться на приём</h1>
+                    <p class="text-white 2xl:w-[355px] text-[20px] font-[400] leading-[30px]">Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
+                </div>
+                <form class="grid grid-rows-[70px_70px_70px_70px_70px_48px] gap-[10px] 2xl:gap-[20px] grid-cols-1 2xl:grid-rows-[70px_70px] 2xl:grid-cols-[360px_360px_360px]">
+                    <div style="transition: transform 0.3s ease;" class="hover:scale-[1.08] w-[100%] h-[70px] rounded-[5px] bg-white flex items-center justify-center"><select class="text-[#141414] w-[85%] cursor-pointer bg-transparent text-[16px] font-[700]"><option>Выберите направление</option></select></div>
+                    <div style="transition: transform 0.3s ease;" class="hover:scale-[1.08] 2xl:row-[-1/-2] 2xl:col-[1/2] w-[100%] h-[70px] rounded-[5px] bg-white flex items-center justify-center"><select class="text-[#141414] w-[85%] cursor-pointer bg-transparent text-[16px] font-[700]"><option>Выберите врача</option></select></div>
+                    <div style="transition: transform 0.3s ease;" class="hover:scale-[1.08] w-[100%] h-[70px] rounded-[5px] bg-white flex items-center justify-center"><input class=" w-[90%] h-[90%] pl-[8px] outline-none placeholder-[#141414] text-[16px] font-[400]" type="text" placeholder="Ваше имя"></div>
+                    <div style="transition: transform 0.3s ease;" class="hover:scale-[1.08] w-[100%] h-[70px] rounded-[5px] bg-white flex items-center justify-center"><input class=" w-[90%] h-[90%] pl-[8px] outline-none placeholder-[#141414] text-[16px] font-[400]" type="tel" placeholder="Ваш телефон"></div>
+                    <input id="text-gradient-hover" type="submit" value="Оставить заявку" style="transition: transform 0.3s ease" class="hover:bg-black hover:scale-[1.05] mt-[20px] 2xl:mt-0 cursor-pointer bg-[#00C6BF] 2xl:col-[-1/-2] 2xl:row-[1/2] rounded-[5px] w-[100%] h-[70px] text-white text-[16px] font-[700]">
+                    <div class="flex items-start gap-[20px] 2xl:mt-0 mt-[20px]">
+                        <input type="checkbox" style="accent-color: blue;" class="w-[25px] h-[25px] cursor-pointer">
+                        <p class="text-white mt-[3px] text-[14px] font-[400] tracking-[2%] leading-[20px]">Отправляя заявку, вы соглашаетесь на нашу <span class="underline hover:text-black cursor-pointer"><a href="">политику конфиденциальности</a></span></p>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main> 
+
+    <footer class="bg-[#F0F6F9] mt-[20px] 2xl:mt-[50px]">
+        <section class="w-[90%] mx-auto 2xl:pt-[20px] pt-[10px] pb-[30px] flex flex-col gap-[25px]">
+            <div class="flex flex-col 2xl:items-center 2xl:flex-row gap-[30px] 2xl:justify-between">
+                <img src="./Photo-jeff/logo.png" alt="" class="w-[100%] 2xl:w-[220px]">
+                <ul class="flex text-[#4F4F4F] 2xl:flex-row 2xl:gap-[60px] 2xl:text-[16px] text-[22px] font-[700] flex-col gap-[10px]">
+                    <li class="hover:text-[#00578A]"><a href="">Направления</a></li>
+                    <li class="hover:text-[#00578A]"><a href="">Услуги</a></li>
+                    <li class="hover:text-[#00578A]"><a href="">Врачи</a></li>
+                    <li class="hover:text-[#00578A]"><a href="">Отзывы</a></li>
+                    <li class="hover:text-[#00578A]"><a href="">Акции</a></li>
+                    <li class="hover:text-[#00578A]"><select class="bg-transparent cursor-pointer"><option><a href="">О цетре</a></option></select></li>
+                    <li class="hover:text-[#00578A]"><a href="">Детство</a></li>
+                    <li class="hover:text-[#00578A]"><a href="">Контакты</a></li>
+                </ul>
+            </div>
+
+            <div class="flex flex-col 2xl:flex-row gap-[25px] 2xl:gap-0 2xl:justify-between">
+                <p class="hidden 2xl:block text-[#4F4F4F] text-[16px] font-[400] leading-[22px]">© 2011-2023 Городской Медицинский <br> Центр. Все права защищены.</p>
+                <h1 class="flex flex-col gap-[5px] text-[#00578A] text-[28px] font-[600]">8 (495) 926-06-03<span>8 (495) 588-08-80</span></h1>
+                <p class="text-[#141414] text-[16px] font-[400] flex flex-col 2xl:gap-[30px] gap-[5px]">г. Мытищи, ул.Рождественская, д.7 <span><span class="text-[#7F8D94]">Ежедневно</span> с 9.00 до 21.00</span></p>
+                <button id="button-gradient-hover" class="w-[350px] 2xl:w-[272px] h-[54px] bg-[#E3EFF5] rounded-[5px] hover:text-white hover:scale-[0.96] transition-transform duration-[0.2s] ease-in-out text-[#4F4F4F] text-[16px] font-[700]">Заказать обратный звонок</button>
+            </div>
+
+            <div class="flex flex-col gap-[30px] 2xl:flex-row 2xl:justify-between">
+                <p class="hidden 2xl:block underline text-[#7F8D94] self-end text-[14px] font-[400] hover:text-black"><a href="">Политика конфиденциальности</a></p>
+                <div class="flex items-center 2xl:items-end gap-[20px] 2xl:ml-[-120px] 2xl:gap-[100px]">
+                    <p onclick="location.href='https://www.whatsapp.com/'" id="text-gradient-hover" class="text-[#4F4F4F] mr-[50px] text-[16px] cursor-pointer font-[400] flex items-center gap-[8px]"><i class="text-[30px] text-[#25D366] fa-brands fa-square-whatsapp"></i>Написать в Whatsapp</p>
+                    <p onclick="location.href='https://vk.com/'" id="text-gradient-hover" class="text-[#4F4F4F] text-[16px] cursor-pointer font-[400] flex items-center gap-[8px]"><i class="text-[30px] text-[#2787F5] fa-brands fa-vk"></i>Vkontakte</p>
+                </div>
+                <div>
+                    <p class="flex flex-col items-start 2xl:items-end gap-[5px] text-[#141414] text-[16px] font-[400]">info@gormedcentre.ru <span><i id="text-gradient" class="mr-[5px] fa-solid fa-glasses"></i> <a href="" class="hover:text-[#00578A]">Версия для слабовидящих</a></span></p>
+                </div>
+            </div>
+            
+            <p class="2xl:hidden text-[#4F4F4F] text-[16px] font-[400] flex flex-col gap-[5px]">© 2011-2023 Городской Медицинский <br> Центр. Все права защищены. <span class="text-[#7F8D94] hover:text-[#00578A] text-[14px] font-[400] underline"><a href="">Политика конфиденциальности</a></span></p>
+        </section>
+
+        <section class="w-[100%] bg-white pt-[20px] 2xl:pb-[10px]">
+            <div class="2xl:flex flex-col items-start w-[90%] 2xl:mb-0 mb-[50px] mx-auto">
+                <p class="text-[14px] font-[400] leading-[18px]">Информация о ценах носит уведомительный характер и не является публичной офертой. Действующий прейскурант, заверенный печатью и подписью руководителя, находится на <br class="hidden 2xl:block"> информационных стендах Центра. Деятельность ООО «ГМЦ» осуществляется на основании действующей лицензии, выданной Департаментом здравоохранения города Москвы.<br><br></p>
+                <p class="text-[14px] font-[400] leading-[18px]">Имеются противопоказания. Необходимо проконсультироваться со специалистом</p>
+            </div>
+        </section>
+    </footer>
 </body>
 </html>
